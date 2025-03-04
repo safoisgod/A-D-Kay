@@ -1,0 +1,114 @@
+/* Book Section */
+.book-section {
+  margin-top: 40px; /* Ensure there's space between services and books */
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.book-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.book-item {
+  position: relative;
+  background-color: #fff;
+  margin: 0 10px;
+  width: 250px; /* Fixed width for each book */
+  height: 380px; /* Fixed height for each book */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect - applies light shadow and tint to the entire book */
+.book-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a light shadow */
+}
+
+/* Overlay for content (name, rating, price, and view button) */
+.book-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Light overlay */
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show overlay when hovered */
+.book-item:hover .book-overlay {
+  opacity: 1;
+}
+
+/* Center the content within the overlay */
+.book-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.book-details .book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.book-details .rating {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.book-details .price {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+/* Styling for the View Me button */
+.book-details .view-me {
+  font-size: 16px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #64def3; /* Light blue background */
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-details .view-me:hover {
+  background-color: #50c1e0; /* Slightly darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.book-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 768px) {
+  .book-item {
+    width: 200px;
+    height: 300px;
+  }
+}

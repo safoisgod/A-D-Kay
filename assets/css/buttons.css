@@ -1,0 +1,27 @@
+.main-button-blue a {
+    font-size: 13px;
+    color: #fff;
+    background-color: #64def3;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+  
+.main-button-green a {
+    font-size: 13px;
+    color: #fff;
+    background-color: #7eff9e;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+  
+.main-button-blue a:hover,  .main-button-green a:hover {
+    opacity: 0.9;
+}
