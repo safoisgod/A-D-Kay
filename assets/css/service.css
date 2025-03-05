@@ -1,4 +1,3 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 /* Services Section */
 .services {
@@ -19,7 +18,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Adjust the rgba value for tint color */
+  background-color: rgba(0, 0, 0, 0.75); /* Adjust the rgba value for tint color */
   z-index: 1; /* Make sure the overlay stays above the background image */
 }
 
