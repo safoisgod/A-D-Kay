@@ -129,8 +129,8 @@
 		  }
 	  })
 
-	$('.owl-books-item').owlCarousel({
-		items:4,
+	$('.owl-courses-item').owlCarousel({
+		items:3,
 		loop:true,
 		dots: true,
 		nav: true,
@@ -144,7 +144,7 @@
 				  items:2
 			  },
 			  1000:{
-				  items:4
+				  items:3
 			  }
 		  }
 	  })

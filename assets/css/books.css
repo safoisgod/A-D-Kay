@@ -10,8 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
+  width: 75%;
+  
 }
 
 .book-item {
@@ -19,7 +19,7 @@
   background-color: #fff;
   margin: 0 10px;
   width: 250px; /* Fixed width for each book */
-  height: 380px; /* Fixed height for each book */
+  height: 500px; /* Fixed height for each book */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -38,8 +38,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 105%;
+  height: 105%;
   background: rgba(0, 0, 0, 0.3); /* Light overlay */
   padding: 20px;
   box-sizing: border-box;
@@ -76,28 +76,16 @@
   margin: 5px 0;
 }
 
+.book-details .rating .checked {
+  color: orange;
+}
+
 .book-details .price {
   font-size: 20px;
   margin: 5px 0;
 }
 
-/* Styling for the View Me button */
-.book-details .view-me {
-  font-size: 16px;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: white;
-  background-color: #64def3; /* Light blue background */
-  border-radius: 5px;
-  border: none;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-.book-details .view-me:hover {
-  background-color: #50c1e0; /* Slightly darker blue on hover */
-  transform: scale(1.05); /* Slight scale effect on hover */
-}
 
 .book-item img {
   width: 100%;
@@ -108,7 +96,7 @@
 /* Responsive tweaks for small screens */
 @media (max-width: 768px) {
   .book-item {
-    width: 200px;
-    height: 300px;
+    width: 100px;
+    height: 400px;
   }
 }
