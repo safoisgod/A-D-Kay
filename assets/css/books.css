@@ -1,19 +1,13 @@
 /* Book Section */
-
-
 .book-section {
   position: relative;
-  background-image: url(../images/background/bookflip-grey.jpg);
+  background-image: url(../images/background/bookshelve.jpg); /* Ensure correct path */
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 120px 0;
-  text-align: center;
-
-  display: flex;
-  justify-content: center;
-  padding: 40px 0;
+  padding-top: 50px;
+  z-index: 0;
 }
 
 .book-section::before {
@@ -23,15 +17,42 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.55); /* Adjusted opacity for better visibility */
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75); /* Adjust opacity for darker shade */
+  z-index: 1; /* Make sure the overlay stays above the background image but below content */
 }
 
+/* Section Container for Heading and Books */
+.book-section .section-container {
+  width: 75%; /* Same width as the book list */
+  margin: 0 auto; /* Center it within the section */
+  padding: 20px;
+  z-index: 2;
+  position: relative; /* Ensure that this is above the background */
+}
+
+.book-section .section-heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+  text-align: left; /* Left align the heading */
+  grid-column: 1 / -1; /* Make the heading span across the whole container */
+  padding-left: 20px; /* Ensure it has some space from the left edge */
+  padding-left: 0;  /* Align the heading directly with the container */
+  z-index: 3;  /* Ensure the heading is above the books */
+  position: relative; /* Make sure it's positioned above other elements */
+}
+
+/* Book List (Carousel) */
 .book-list {
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* Ensure books are centered */
   align-items: center;
-  width: 75%;
   z-index: 2;
 }
 
@@ -105,8 +126,6 @@
   font-size: 20px;
   margin: 5px 0;
 }
-
-
 
 .book-item img {
   width: 100%;

@@ -1,244 +1,107 @@
-
-/* Services Section */
-.services {
+.service-section {
   position: relative;
-  background-image: url(../images/background/bookshelve.jpg);
-  background-size: cover;
+  background-image: url(../images/background/bookshelve.jpg); /* Ensure correct path */
   background-position: center center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
-  padding: 60px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  z-index: 0;
 }
 
-.services::before {
+
+.service-section::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75); /* Adjust the rgba value for tint color */
-  z-index: 1; /* Make sure the overlay stays above the background image */
+  background: linear-gradient(rgba(40,44,51, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
+  z-index: 1; /* Make sure the overlay stays above the background image but below content */
 }
 
-.services .item {
-  background-image: url(../images/background/blue\ background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  margin-top: 10px;
-  border-radius: 20px;
-  text-align: center;
-  color: #fff;
-  padding: 40px;
-  height: 300px;
-  position: relative;
-  z-index: 2; /* Ensure that content appears above the overlay */
-}
-
-
-.services .item .icon {
-  max-width: 60px;
+.service-section .container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjusted for 5 items */
+  gap: 20px;
+  padding: 20px;
   margin: 0 auto;
+  max-width: 1500px;
+  position: relative;
+  z-index: 2; /* Ensure this stays above the overlay */
 }
 
-.services .item h4 {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.services .item p {
+.service-section .section-heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
   color: #fff;
-  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+  text-align: left; /* Left align the heading */
+  grid-column: 1 / -1; /* Make the heading span across the whole container */
+  padding-left: 20px; /* Ensure it has some space from the left edge */
 }
 
-.services .owl-nav {
-  display: inline-block !important;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-25px);
-}
-    
-.services .owl-nav .owl-prev {
-  margin-right: 10px;
-  outline: none;
-  position: absolute;
-  left: -80px;
-}
-
-.services .owl-nav .owl-prev span,
-.services .owl-nav .owl-next span {
-  opacity: 0;
-}
-
-.services .owl-nav .owl-prev:before {
-  display: inline-block;
-  font-family: 'FontAwesome';
-  color: #1e1e1e;
-  font-size: 25px;
-  font-weight: 700;
-  content: '\f104';
-  background-color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  line-height: 50px;
-}
-
-.services .owl-nav .owl-prev {
-  opacity: 1;
-  transition: all .5s;
-}
-
-.services .owl-nav .owl-prev:hover {
-  opacity: 0.9;
-}
-
-.services .owl-nav .owl-next {
-  opacity: 1;
-  transition: all .5s;
-}
-
-.services .owl-nav .owl-next:hover {
-  opacity: 0.9;
-}
-
-.services .owl-nav .owl-next {
-  margin-left: 10px;
-  outline: none;
-  position: absolute;
-  right: -85px;
-}
-
-.services .owl-nav .owl-next:before {
-  display: inline-block;
-  font-family: 'FontAwesome';
-  color: #1e1e1e;
-  font-size: 25px;
-  font-weight: 700;
-  content: '\f105';
-  background-color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  line-height: 50px;
-}
-
-.services .owl-nav {
-  display: inline-block !important;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-25px);
-}
-    
-.services .owl-nav .owl-prev{
-  margin-right: 10px;
-  outline: none;
-  position: absolute;
-  left: -80px;
-}
-
-.services .owl-nav .owl-prev span,
-.services .owl-nav .owl-next span {
-  opacity: 0;
-}
-
-.services .owl-nav .owl-prev:before {
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  color: #1e1e1e;
-  font-size: 25px;
-  font-weight: 700;
-  content: '\f104';
-  background-color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  line-height: 50px;
-}
-
-.services .owl-nav .owl-prev {
-  opacity: 1;
-  transition: all .5s;
-}
-
-.services .owl-nav .owl-prev:hover {
-  opacity: 0.9;
-}
-
-.services .owl-nav .owl-next {
-  opacity: 1;
-  transition: all .5s;
-}
-
-.services .owl-nav .owl-next:hover {
-  opacity: 0.9;
-}
-
-.services .owl-nav .owl-next{
-  margin-left: 10px;
-  outline: none;
-  position: absolute;
-  right: -85px;
-}
-
-.services .owl-nav .owl-next:before {
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
+.service-section .container .item {
+  background-color: #f0f0f0;
   color: #000000;
-  font-size: 25px;
-  font-weight: 700;
-  content: '\f054'; /* Unicode for FontAwesome right arrow */
-  background-color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  line-height: 50px;
-  text-align: center; /* Center the icon within the circle */
-  vertical-align: middle; /* Center the icon vertically */
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
+.service-section .container .item:hover {
+  background-color: #81cef8;
+  color: #fff;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
 
-@media (max-width: 1300px) {
-  .services .owl-nav .owl-next{
-    right: -30px;
-  }
-  .services .owl-nav .owl-prev{
-    left: -25px;
+.service-section .container .item img {
+  max-width: 50px;
+  transition: transform 0.5s ease;
+}
+
+.service-section .container .item:hover img {
+  transform: scale(1.2);
+}
+
+.service-section .container .item h3 {
+  margin-top: 10px;
+  transition: color 0.5s ease;
+}
+
+.service-section .container .item:hover h3 {
+  color: #000000;
+}
+
+.service-section .container .item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000000;
+  transition: color 0.5s ease;
+}
+
+.service-section .container .item:hover p {
+  color: #666;
+}
+
+@media (max-width: 1000px) {
+  .service-section .container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 1200px) {
-  .services .owl-nav .owl-next{
-    right: -70px;
-  }
-  .services .owl-nav .owl-prev{
-    left: -65px;
+@media (max-width: 650px) {
+  .service-section .container {
+    grid-template-columns: 1fr;
   }
 }
-
-@media (max-width: 1085px) {
-  .services .owl-nav .owl-next{
-    right: -30px;
-  }
-  .services .owl-nav .owl-prev{
-    left: -25px;
-  }
-}
-
-@media (max-width: 1005px) {
-  .services .owl-nav .owl-next{
-    display: none;
-  }
-  .services .owl-nav .owl-prev{
-    display: none;
-  }
-}
-

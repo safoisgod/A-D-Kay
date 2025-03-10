@@ -24,6 +24,7 @@
   
 .main-button-blue a:hover,  .main-button-green a:hover {
     opacity: 0.9;
+    transform: scale(1.05);
 }
 
 /* Styling for the View Me button */

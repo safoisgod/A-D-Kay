@@ -10,9 +10,6 @@
     
     <!-- Additional CSS Files -->
      <link rel="stylesheet" href="assets/css/old/owl.css">
-     <link rel="stylesheet" href="assets/css/old/flex-slider.css">
-     <link rel="stylesheet" href="assets/css/old/fontawesome.css">
-     <link rel="stylesheet" href="assets/css/old/lightbox.css">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/service.css">
     <link rel="stylesheet" href="assets/css/buttons.css">
     <link rel="stylesheet" href="assets/css/facts.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
 
     <!-- Add Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -37,11 +35,11 @@
 
 <body>
 
-    <!-- Header Section (unchanged) -->
+    <!-- Header Section -->
     <header class="header-space">
         <nav class="navigation-space">
             <div class="left-side">
-                <img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo">
+                <a href="index.htm"><img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo"></a>
             </div>
             <div class="right-side">
                 <ul class="menu-space">
@@ -59,7 +57,7 @@
         </nav>
     </header>
 
-    <!-- Main Banner Section (unchanged) -->
+    <!-- Main Banner Section -->
     <section class="main-banner">
         <video autoplay loop muted class="background-video">
             <source src="assets/videos/book store.mp4">
@@ -79,195 +77,152 @@
 
 
 
-    <section class="services">
+    <section class="service-section" id="scroll-stop">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="owl-service-item owl-carousel">
-              
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/services/book design.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Professional Book Design</h4>
-                  <p>Our expert design team creates visually captivating layouts, ensuring your book is both aesthetically appealing and optimized for seamless readability.</p>
-                </div>
-              </div>
-                
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/services/consultation.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Publishing Consultation</h4>
-                  <p>Benefit from tailored advice and insights from publishing professionals who guide you through every stage of the process, from manuscript development to market launch.</p>
-                </div>
-              </div>
-                
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/services/distribution.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Global Distribution</h4>
-                  <p>Our expansive distribution network ensures your book reaches global audiences, both in physical retail locations and on popular digital platforms.</p>
-                </div>
-              </div>
-                
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/services/edit.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Expert Editing Services</h4>
-                  <p>Our skilled editors will meticulously refine your manuscript, improving its structure, language, and flow to ensure it meets industry standards and resonates with readers.</p>
-                </div>
-              </div>
-                
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/services/licensing.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Intellectual Property & Licensing</h4>
-                  <p>Maximize the potential of your book with professional licensing services, enabling your work to be adapted, translated, and marketed internationally.</p>
-                </div>
-              </div>
-    
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/services/marketing.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>Comprehensive Marketing Strategy</h4>
-                  <p>Elevate your book's presence with a strategic marketing campaign tailored to engage your target audience and increase visibility through digital and traditional channels.</p>
-                </div>
-              </div>
-    
-              <div class="item">
-                <div class="icon">
-                  <img src="assets/images/services/print-on-demand.png" alt="">
-                </div>
-                <div class="down-content">
-                  <h4>On-Demand Printing Solutions</h4>
-                  <p>Our on-demand printing service offers high-quality production with minimal overhead, perfect for both small batch prints and larger scale production as needed.</p>
-                </div>
-              </div>  
-            </div>
-          </div>
+        <h2 class="section-heading">OUR SERVICES</h2> <!-- Heading inside the container -->
+        <div class="item">
+          <img src="assets/images/services/edit.png" alt="Editing">
+          <h3>Editing & Proofreading</h3>
+          <p>Professional editing to refine your manuscript, ensuring clarity, consistency, and error-free text.</p>
+        </div>
+        <div class="item">
+          <img src="assets/images/services/book design.png" alt="Book Design">
+          <h3>Book Design & Layout</h3>
+          <p>Custom cover and interior design that reflects your book’s theme and engages readers.</p>
+        </div>
+        <div class="item">
+          <img src="assets/images/services/distribution.png" alt="Distribution">
+          <h3>Printing & Distribution</h3>
+          <p>High-quality printing and worldwide distribution to make your book accessible in bookstores and online.</p>
+        </div>
+        <div class="item">
+          <img src="assets/images/services/marketing.png" alt="Marketing">
+          <h3>Marketing & Promotion</h3>
+          <p>Targeted marketing strategies to increase visibility, from social media campaigns to book launch events.</p>
+        </div>
+        <div class="item">
+          <img src="assets/images/services/licensing.png" alt="Licensing">
+          <h3>Copyright & Licensing</h3>
+          <p>Expert guidance on securing copyrights and managing licensing for global rights and adaptations.</p>
         </div>
       </div>
-    </section>  
+    </section>
+    
+      
     
     
 
     <section class="book-section">
-      <div class="book-list" id="book-carousel">
+      <!-- Left-aligned Heading, aligned with the book items -->
+      <div class="section-container">
+        <div class="section-heading">OUR BOOK COLLECTION</div> 
+        <div class="book-list" id="book-carousel">
           <div class="book-item">
-              <img src="assets/images/books/Culture Brewed in an African Pot.png" alt="Book 1">
-              <div class="book-overlay">
-                  <div class="book-details">
-                    <p class="rating">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked "></span>
-                    </p>
-                      <p class="price">$4.99</p>
-                      <a href="#book1" class="view-me">View Me</a>
-                      <a href="#book1" class="buy">Buy</a>
-                  </div>
+            <img src="assets/images/books/Culture Brewed in an African Pot.png" alt="Book 1">
+            <div class="book-overlay">
+              <div class="book-details">
+                <p class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </p>
+                <p class="price">$4.99</p>
+                <a href="#book1" class="view-me">View Me</a>
+                <a href="#book1" class="buy">Buy</a>
               </div>
+            </div>
           </div>
           <div class="book-item">
-              <img src="assets/images/books/kbi-front.png" alt="Book 2">
-              <div class="book-overlay">
-                  <div class="book-details">
-                    <p class="rating">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                    </p>
-                      <p class="price">$3.99</p>
-                      <a href="#book2" class="view-me">View Me</a>
-                      <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy">Buy</a>
-                  </div>
+            <img src="assets/images/books/kbi-front.png" alt="Book 2">
+            <div class="book-overlay">
+              <div class="book-details">
+                <p class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </p>
+                <p class="price">$3.99</p>
+                <a href="#book2" class="view-me">View Me</a>
+                <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy">Buy</a>
               </div>
+            </div>
           </div>
           <div class="book-item">
-              <img src="assets/images/books/sok-front.jpg" alt="Book 3">
-              <div class="book-overlay">
-                  <div class="book-details">
-                    <p class="rating">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                    </p>
-                      <p class="price">$00.00</p>
-                      <a href="#book3" class="view-me">View Me</a>
-                      <a href="#book3" class="buy">Buy</a>
-                  </div>
+            <img src="assets/images/books/sok-front.jpg" alt="Book 3">
+            <div class="book-overlay">
+              <div class="book-details">
+                <p class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </p>
+                <p class="price">$00.00</p>
+                <a href="#book3" class="view-me">View Me</a>
+                <a href="#book3" class="buy">Buy</a>
               </div>
+            </div>
           </div>
           <div class="book-item">
-              <img src="assets/images/books/owl-wisdom.jpg" alt="Book 1">
-              <div class="book-overlay">
-                  <div class="book-details">
-                    <p class="rating">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </p>
-                      <p class="price">$00.00</p>
-                      <a href="#book4" class="view-me">View Me</a>
-                      <a href="#book4" class="buy">Buy</a>
-                  </div>
+            <img src="assets/images/books/owl-wisdom.jpg" alt="Book 1">
+            <div class="book-overlay">
+              <div class="book-details">
+                <p class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </p>
+                <p class="price">$00.00</p>
+                <a href="#book4" class="view-me">View Me</a>
+                <a href="#book4" class="buy">Buy</a>
               </div>
+            </div>
           </div>
           <div class="book-item">
-              <img src="assets/images/books/particles of wisdom.jpg" alt="Book 2">
-              <div class="book-overlay">
-                  <div class="book-details">
-                    <p class="rating">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                    </p>
-                      <p class="price">$6.99</p>
-                      <a href="#book5" class="view-me">View Me</a>
-                      <a href="#book5" class="buy">Buy</a>
-                  </div>
+            <img src="assets/images/books/particles of wisdom.jpg" alt="Book 2">
+            <div class="book-overlay">
+              <div class="book-details">
+                <p class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </p>
+                <p class="price">$6.99</p>
+                <a href="#book5" class="view-me">View Me</a>
+                <a href="#book5" class="buy">Buy</a>
               </div>
+            </div>
           </div>
           <div class="book-item">
-              <img src="assets/images/books/kbi-back.png" alt="Book 3">
-              <div class="book-overlay">
-                  <div class="book-details">
-                      <p class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                      </p>
-                      <p class="price">$3.99</p>
-                      <a href="#book6" class="view-me">View Me</a>
-                      <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy">Buy</a>
-                  </div>
+            <img src="assets/images/books/kbi-back.png" alt="Book 3">
+            <div class="book-overlay">
+              <div class="book-details">
+                <p class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </p>
+                <p class="price">$3.99</p>
+                <a href="#book6" class="view-me">View Me</a>
+                <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy">Buy</a>
               </div>
+            </div>
           </div>
         </div>
+      </div>
     </section>
+    
 
 
     <section class="our-facts">
@@ -307,13 +262,88 @@
                 <img src="assets/images/authors/Ampem-Daako Kay -nb.png" alt="Author Name" class="author-image">
                 <p class="author-name">Ampem-Daako Kay</p>
                 <p class="author-bio">The late founder of A-D Kay Publications, Ampem-Daako Kay, was the heart of the company. He authored most of the books in our collection and passed away last year, leaving behind a legacy that continues to inspire us.</p>
-                <a href="author-profile.html" class="btn btn-primary">Discover More</a>
+                <div class="main-button-blue">
+                  <a href="author-profile.html">Discover More</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="contact-us" id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- Left side: Contact Form -->
+          <div class="col-lg-9 align-self-center">
+            <div class="row">
+              <div class="col-lg-12">
+                <form id="contact" action="" method="post">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h2>Let's Get in Touch</h2>
+                    </div>
+                    <div class="col-lg-4">
+                      <fieldset>
+                        <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-4">
+                      <fieldset>
+                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-4">
+                      <fieldset>
+                        <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Right side: Contact Info -->
+          <div class="col-lg-3">
+            <div class="right-info">
+              <ul>
+                <li>
+                  <h6>Phone Number</h6>
+                  <span>+233 54-355-0766</span>
+                </li>
+                <li>
+                  <h6>Email Address</h6>
+                  <span>info@adkaypublications.com</span>
+                </li>
+                <li>
+                  <h6>Website URL</h6>
+                  <span>www.adkaypublications.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Footer -->
+      <div class="footer">
+        <p>Copyright © 2025 A-D Kay Publications. All Rights Reserved.</p>
+      </div>
+    </section>
+    
+  
     
     
     
@@ -335,12 +365,11 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <script src="assets/js/old/isotope.min.js"></script>
-  <script src="assets/js/old/isotope.js"></script>
+ 
   <script src="assets/js/old/owl-carousel.js"></script>
-  <script src="assets/js/old/lightbox.js"></script>
-  <script src="assets/js/old/tabs.js"></script>
-  <script src="assets/js/old/video.js"></script>
+
+
+
   <script src="assets/js/old/slick-slider.js"></script>
   <script src="assets/js/old/custom.js"></script>
   <script>
@@ -380,7 +409,7 @@
         });
       };
 
-          $(document).ready(function(){
+      $(document).ready(function(){
         $('#book-carousel').slick({
           infinite: true,
           slidesToShow: 4,
@@ -389,6 +418,16 @@
           autoplaySpeed: 4900,
           responsive: [
             {
+              
+              breakpoint: 1500,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              }
+            },
+
+            {
+              
               breakpoint: 1000,
               settings: {
                 slidesToShow: 2,
@@ -406,12 +445,6 @@
         });
       });
 
-    function toggleMenu() {
-    const menu = document.querySelector('.menu-space');
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-    menu.classList.toggle('active');
-    hamburgerIcon.classList.toggle('active');
-}
 
   </script>
 
