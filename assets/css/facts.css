@@ -1,4 +1,4 @@
-/* Background and Container Styles */
+/* Our Facts Section Styles */
 .our-facts {
   position: relative;
   background-image: url(../images/background/bookshelve.jpg);
@@ -6,8 +6,9 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 120px 0;
+  padding: 60px 50px; /* Reduced padding */
   text-align: center;
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
 .our-facts::before {
@@ -40,7 +41,7 @@ section.our-facts h2 {
 
 /* Fact Box Styles */
 .count-area-content {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   padding: 30px 40px;
   margin: 15px 0;
@@ -58,7 +59,6 @@ section.our-facts h2 {
   color: #64def3;
   margin-bottom: 10px;
   letter-spacing: 1px;
-
 }
 
 .count-title {
@@ -68,13 +68,9 @@ section.our-facts h2 {
   color: #fff;
 }
 
-.new-students {
-  margin-top: 45px;
-}
-
 /* Right Side Content: Author Spotlight */
 .author-spotlight {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 30px;
   border-radius: 15px;
   text-align: center;
@@ -113,6 +109,7 @@ section.our-facts h2 {
   color: #fff;
   margin-bottom: 0;
 }
+
 
 /* Responsive Design Adjustments */
 @media (max-width: 767px) {
@@ -157,5 +154,11 @@ section.our-facts h2 {
   .count-area-content {
     padding: 20px;
     margin-bottom: 20px;
+  }
+
+  /* Reduce padding on the sections for small screens */
+  .our-facts,
+  section.contact-us {
+    padding: 40px 20px;
   }
 }

@@ -17,8 +17,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75); /* Adjust opacity for darker shade */
-  z-index: 1; /* Make sure the overlay stays above the background image but below content */
+  background-color: rgba(0, 0, 0, 0.75); /* Darker shade for the background */
+  z-index: 1; /* Ensure the overlay stays above the background image but below content */
 }
 
 /* Section Container for Heading and Books */
@@ -26,26 +26,33 @@
   width: 75%; /* Same width as the book list */
   margin: 0 auto; /* Center it within the section */
   padding: 20px;
-  z-index: 2;
-  position: relative; /* Ensure that this is above the background */
+  position: relative; /* Ensure that this is above the background and overlay */
+  z-index: 2; /* Make sure this is above the overlay */
 }
 
+/* Section Heading */
 .book-section .section-heading {
   font-size: 42px;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 1px;
-  margin-bottom: 40px;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffff; /* White color for better contrast */
   font-family: 'Roboto', sans-serif;
-  margin-bottom: 20px;
-  text-align: left; /* Left align the heading */
-  grid-column: 1 / -1; /* Make the heading span across the whole container */
-  padding-left: 20px; /* Ensure it has some space from the left edge */
-  padding-left: 0;  /* Align the heading directly with the container */
-  z-index: 3;  /* Ensure the heading is above the books */
-  position: relative; /* Make sure it's positioned above other elements */
+  text-align: center; /* Center align the heading */
+  z-index: 2; /* Ensure heading stays above the overlay */
+
+}
+
+/* Section Description */
+.book-section .section-description {
+  font-size: 18px;
+  color: #fff;
+  text-align: center; /* Center the description */
+  margin-bottom: 30px; /* Space below the description */
+  z-index: 2; /* Ensure description stays above the overlay */
+  max-width: 80%; /* Limit width of description */
+  margin: 0 auto; /* Center it horizontally */
 }
 
 /* Book List (Carousel) */
@@ -53,9 +60,11 @@
   display: flex;
   justify-content: center;  /* Ensure books are centered */
   align-items: center;
-  z-index: 2;
+  margin-top: 50px;
+  z-index: 2; /* Ensure this stays above the overlay */
 }
 
+/* Individual Book Item */
 .book-item {
   position: relative;
   background-color: #fff;
@@ -69,7 +78,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect - applies light shadow and tint to the entire book */
 .book-item:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a light shadow */

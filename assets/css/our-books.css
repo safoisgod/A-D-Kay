@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background Styling for All Sections Except Header */
+  .book-section,
+  .search-filter-section,
+  footer {
+    position: relative;
+    background-image: url(../images/background/bookshelve.jpg); /* Ensure correct path */
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    z-index: 0;
+  }
+  
+
+  
+  /* Container for heading and description */
+  .book-section .text-container,
+  .search-filter-section .text-container {
+    position: relative;
+    padding-bottom: 10px;
+    z-index: 2; /* Ensure it stays above the overlay */
+  }
+  
+  /* Search and Filter Box Styling */
+  .search-filter-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px; /* Set a max-width for the search and filter */
+    margin: 0 auto; /* Center it horizontally */
+    z-index: 2; /* Ensure it stays above the overlay */
+  }
+  
+  .search-box,
+  .filter-box {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-box {
+    width: 50%;
+  }
+  
+  .filter-box {
+    width: 30%;
+  }
+  
+  /* Book Section Styles */
+  .book-section {
+    padding: 40px 20px;
+    background-color: transparent;
+  }
+  
+  .book-section .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .book-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 books per row */
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .book-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .book-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .book-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .book-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .book-item:hover .book-overlay {
+    opacity: 1;
+  }
+  
+  .book-details {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .book-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .checked {
+    color: #f39c12;
+  }
+  
+  .view-btn,
+  .buy-btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px 0;
+  }
+  
+  .view-btn:hover,
+  .buy-btn:hover {
+    background-color: #e67e22;
+  }
+  
+  .book-overlay .view-btn,
+  .book-overlay .buy-btn {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design Adjustments */
+  @media (max-width: 1024px) {
+    .search-filter-box {
+      max-width: 600px; /* Reduce max-width for medium screens */
+    }
+  
+    .book-list {
+      grid-template-columns: repeat(4, 1fr); /* 4 books per row for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search-filter-box {
+      max-width: 100%; /* Full-width for smaller screens */
+      flex-direction: column; /* Stack search and filter vertically */
+    }
+  
+    .search-box,
+    .filter-box {
+      width: 100%;
+    }
+  
+    .book-list {
+      grid-template-columns: repeat(3, 1fr); /* 3 books per row for smaller screens */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .book-list {
+      grid-template-columns: 1fr; /* 1 book per row for mobile devices */
+    }
+  
+    .book-item {
+      width: 100%;
+      height: auto;
+    }
+  
+    .search-filter-box {
+      max-width: 100%; /* Ensure the search and filter occupy full width on mobile */
+    }
+  
+    .search-box,
+    .filter-box {
+      width: 100%;
+    }
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  

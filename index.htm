@@ -44,7 +44,7 @@
             <div class="right-side">
                 <ul class="menu-space">
                     <li><a href="index.htm">HOME</a></li>
-                    <li><a href="book.htm">BOOK COLLECTION</a></li>
+                    <li><a href="books.htm">BOOK COLLECTION</a></li>
                     <li><a href="about.htm">ABOUT US</a></li>
                     <li><a href="#contact">CONTACT US</a></li>
                 </ul>
@@ -78,8 +78,12 @@
 
 
     <section class="service-section" id="scroll-stop">
+      <div class="text-container"> <!-- New container for heading and description -->
+        <h2 class="section-heading">OUR SERVICES</h2>
+        <p class="section-description">Explore our professional services designed to help you succeed in the world of publishing.</p>
+      </div>
+      
       <div class="container">
-        <h2 class="section-heading">OUR SERVICES</h2> <!-- Heading inside the container -->
         <div class="item">
           <img src="assets/images/services/edit.png" alt="Editing">
           <h3>Editing & Proofreading</h3>
@@ -108,6 +112,8 @@
       </div>
     </section>
     
+    
+    
       
     
     
@@ -116,6 +122,9 @@
       <!-- Left-aligned Heading, aligned with the book items -->
       <div class="section-container">
         <div class="section-heading">OUR BOOK COLLECTION</div> 
+        <div class="section-description">
+          Discover our exclusive collection of books, each handpicked to inspire and enlighten. Browse through and find your next favorite read!
+        </div>
         <div class="book-list" id="book-carousel">
           <div class="book-item">
             <img src="assets/images/books/Culture Brewed in an African Pot.png" alt="Book 1">
@@ -229,7 +238,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h2>Here's a few facts about A-D Kay Publications</h2>
+            <h2>Discover Key Facts About A-D Kay Publications</h2>
             <div class="row">
               <div class="col-lg-6">
                 <div class="count-area-content">
@@ -273,86 +282,72 @@
     </section>
 
     <section class="contact-us" id="contact">
-      <div class="container">
-        <div class="row">
-          <!-- Left side: Contact Form -->
-          <div class="col-lg-9 align-self-center">
-            <div class="row">
-              <div class="col-lg-12">
-                <form id="contact" action="" method="post">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <h2>Let's Get in Touch</h2>
-                    </div>
-                    <div class="col-lg-4">
-                      <fieldset>
-                        <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-4">
-                      <fieldset>
-                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-4">
-                      <fieldset>
-                        <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
+  <div class="container">
+    <div class="row">
+      <!-- Left side: Contact Form -->
+      <div class="col-lg-9">
+        <form id="contact" action="" method="post">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>Let's Get in Touch</h2>
+            </div>
+            <div class="col-lg-4">
+              <fieldset>
+                <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
+              </fieldset>
+            </div>
+            <div class="col-lg-4">
+              <fieldset>
+                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required>
+              </fieldset>
+            </div>
+            <div class="col-lg-4">
+              <fieldset>
+                <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+              </fieldset>
             </div>
           </div>
-    
-          <!-- Right side: Contact Info -->
-          <div class="col-lg-3">
-            <div class="right-info">
-              <ul>
-                <li>
-                  <h6>Phone Number</h6>
-                  <span>+233 54-355-0766</span>
-                </li>
-                <li>
-                  <h6>Email Address</h6>
-                  <span>info@adkaypublications.com</span>
-                </li>
-                <li>
-                  <h6>Website URL</h6>
-                  <span>www.adkaypublications.com</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+        </form>
+      </div>
+
+      <!-- Right side: Contact Info -->
+      <div class="col-lg-3">
+        <div class="right-info">
+          <ul>
+            <li>
+              <h6>Phone Number</h6>
+              <span>+233 54-355-0766</span>
+            </li>
+            <li>
+              <h6>Email Address</h6>
+              <span>info@adkaypublications.com</span>
+            </li>
+            <li>
+              <h6>Website URL</h6>
+              <span>www.adkaypublications.com</span>
+            </li>
+          </ul>
         </div>
       </div>
-    
-      <!-- Footer -->
-      <div class="footer">
-        <p>Copyright © 2025 A-D Kay Publications. All Rights Reserved.</p>
-      </div>
-    </section>
-    
-  
-    
-    
-    
-    
-    
+    </div>
+  </div>
+</section>
 
-        
+<!-- Footer Section -->
+<footer class="footer">
+  <p>Copyright © 2025 A-D Kay Publications. All Rights Reserved.</p>
+</footer>
 
-    
 
 
   

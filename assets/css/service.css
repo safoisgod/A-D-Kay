@@ -1,3 +1,4 @@
+/* Service Section Styles */
 .service-section {
   position: relative;
   background-image: url(../images/background/bookshelve.jpg); /* Ensure correct path */
@@ -9,7 +10,15 @@
   z-index: 0;
 }
 
+/* Container for heading and description */
+.service-section .text-container {
+  position: relative;
+  padding-bottom: 10px;
+  z-index: 2; /* Ensure it stays above the overlay */
 
+}
+
+/* Overlay applied only to the container for the service items */
 .service-section::before {
   content: '';
   position: absolute;
@@ -17,13 +26,39 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(40,44,51, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
-  z-index: 1; /* Make sure the overlay stays above the background image but below content */
+  background: linear-gradient(rgba(40, 44, 51, 1) 0%, rgba(0, 0, 0, 0.75) 100%); /* Dark overlay */
+  z-index: 1; /* Keep it below the content (heading + description + items) */
 }
 
+/* Center the section heading and make it more visible */
+.service-section .section-heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff; /* White color for better contrast */
+  font-family: 'Roboto', sans-serif;
+  text-align: center; /* Center align the heading */
+  z-index: 2; /* Ensure heading stays above the overlay */
+
+}
+
+/* Style for the short description below the heading */
+.service-section .section-description {
+  font-size: 18px;
+  color: #fff;
+  text-align: center; /* Center the description */
+  margin-bottom: 30px; /* Space below the description */
+  z-index: 2; /* Ensure description stays above the overlay */
+  max-width: 80%; /* Limit width of description */
+  margin: 0 auto; /* Center it horizontally */
+}
+
+/* Container for service items */
 .service-section .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Adjusted for 5 items */
+  grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
   gap: 20px;
   padding: 20px;
   margin: 0 auto;
@@ -32,24 +67,10 @@
   z-index: 2; /* Ensure this stays above the overlay */
 }
 
-.service-section .section-heading {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 1px;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 20px;
-  text-align: left; /* Left align the heading */
-  grid-column: 1 / -1; /* Make the heading span across the whole container */
-  padding-left: 20px; /* Ensure it has some space from the left edge */
-}
-
+/* Style for each service item */
 .service-section .container .item {
-  background-color: #f0f0f0;
-  color: #000000;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #64def3;
   padding: 20px;
   text-align: center;
   transition: all 0.5s ease;
@@ -58,7 +79,7 @@
 }
 
 .service-section .container .item:hover {
-  background-color: #81cef8;
+  background-color: #64def3;
   color: #fff;
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
@@ -76,7 +97,7 @@
 
 .service-section .container .item h3 {
   margin-top: 10px;
-  transition: color 0.5s ease;
+  transition: color 0.25s ease;
 }
 
 .service-section .container .item:hover h3 {
@@ -86,7 +107,7 @@
 .service-section .container .item p {
   margin-top: 10px;
   font-size: 14px;
-  color: #000000;
+  color: #ffffff;
   transition: color 0.5s ease;
 }
 
@@ -94,14 +115,18 @@
   color: #666;
 }
 
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1000px (tablet size) */
 @media (max-width: 1000px) {
   .service-section .container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
   }
 }
 
+/* For screens smaller than 650px (mobile size) */
 @media (max-width: 650px) {
   .service-section .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* One column for small screens */
   }
 }

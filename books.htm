@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-D Kay Publications</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/old/owl.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="assets/css/header.css">
+
+    <!-- Add Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="assets/css/our-books.css"> <!-- Link to updated CSS -->
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header-space">
+        <nav class="navigation-space">
+            <div class="left-side">
+                <a href="index.htm"><img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo"></a>
+            </div>
+            <div class="right-side">
+                <ul class="menu-space">
+                    <li><a href="index.htm">HOME</a></li>
+                    <li><a href="books.htm">BOOK COLLECTION</a></li>
+                    <li><a href="about.htm">ABOUT US</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter-section">
+        <div class="search-filter-container">
+            <!-- Search Box and Filter side by side -->
+            <div class="search-filter-box">
+                <input type="text" class="search-box" placeholder="Search for books..." />
+                <select class="filter-box">
+                    <option value="all">All Categories</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="nonfiction">Nonfiction</option>
+                    <option value="mystery">Mystery</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Section -->
+    <section class="book-section">
+        <div class="section-container">
+            <div class="book-list">
+                <!-- Book Item 1 -->
+                <div class="book-item" data-category="fiction">
+                    <img src="assets/images/books/Culture Brewed in an African Pot.png" alt="Book 1">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">Book Title 1</div>
+                            <div class="author-name">Author Name</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="view-btn">View Me</a>
+                                <a href="#" class="buy-btn">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 2 -->
+                <div class="book-item" data-category="fiction">
+                    <img src="assets/images/books/kbi-front.png" alt="Book 2">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">Book Title 2</div>
+                            <div class="author-name">Author Name</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="view-btn">View Me</a>
+                                <a href="#" class="buy-btn">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 3 -->
+                <div class="book-item" data-category="nonfiction">
+                    <img src="assets/images/books/kbi-back.png" alt="Book 3">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">Book Title 3</div>
+                            <div class="author-name">Author Name</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="view-btn">View Me</a>
+                                <a href="#" class="buy-btn">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 4 -->
+                <div class="book-item" data-category="mystery">
+                    <img src="assets/images/books/owl-wisdom.jpg" alt="Book 4">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">Book Title 4</div>
+                            <div class="author-name">Author Name</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="view-btn">View Me</a>
+                                <a href="#" class="buy-btn">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 5 -->
+                <div class="book-item" data-category="fiction">
+                    <img src="assets/images/books/particles of wisdom.jpg" alt="Book 5">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">Book Title 5</div>
+                            <div class="author-name">Author Name</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="view-btn">View Me</a>
+                                <a href="#" class="buy-btn">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 6 -->
+                <div class="book-item" data-category="nonfiction">
+                    <img src="assets/images/books/sok-front.jpg" alt="Book 6">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">Book Title 6</div>
+                            <div class="author-name">Author Name</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="view-btn">View Me</a>
+                                <a href="#" class="buy-btn">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Bookstore. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/old/custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBox = document.querySelector('.search-box');
+            const filterBox = document.querySelector('.filter-box');
+            const bookItems = document.querySelectorAll('.book-item');
+
+            // Function to filter the books
+            function filterBooks() {
+                const searchQuery = searchBox.value.toLowerCase();
+                const selectedCategory = filterBox.value;
+
+                bookItems.forEach(item => {
+                    const bookTitle = item.querySelector('.book-title').textContent.toLowerCase();
+                    const bookCategory = item.getAttribute('data-category'); // Assume each book has a data-category
+
+                    let matchesSearch = bookTitle.includes(searchQuery);
+                    let matchesCategory = (selectedCategory === 'all' || selectedCategory === bookCategory);
+
+                    if (matchesSearch && matchesCategory) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            // Event listeners for search and filter
+            searchBox.addEventListener('input', filterBooks);
+            filterBox.addEventListener('change', filterBooks);
+        });
+    </script>
+</body>
+
+</html>
