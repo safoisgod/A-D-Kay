@@ -45,7 +45,7 @@
                 <ul class="menu-space">
                     <li><a href="index.htm">HOME</a></li>
                     <li><a href="books.htm">BOOK COLLECTION</a></li>
-                    <li><a href="about.htm">ABOUT US</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#contact">CONTACT US</a></li>
                 </ul>
                 <div class="hamburger-icon" onclick="toggleMenu()">
@@ -138,8 +138,8 @@
                   <span class="fa fa-star checked"></span>
                 </p>
                 <p class="price">$4.99</p>
-                <a href="#book1" class="view-me">View Me</a>
-                <a href="#book1" class="buy">Buy</a>
+                <a href="book1-details.htm" class="view-me">View Me</a>
+                <a href="book1-details.htm" class="buy">Buy</a>
               </div>
             </div>
           </div>
@@ -155,13 +155,13 @@
                   <span class="fa fa-star"></span>
                 </p>
                 <p class="price">$3.99</p>
-                <a href="#book2" class="view-me">View Me</a>
+                <a href="book2-details.htm" class="view-me">View Me</a>
                 <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy">Buy</a>
               </div>
             </div>
           </div>
           <div class="book-item">
-            <img src="assets/images/books/sok-front.jpg" alt="Book 3">
+            <img src="assets/images/books/sok-front.jpg" alt="Book 6">
             <div class="book-overlay">
               <div class="book-details">
                 <p class="rating">
@@ -172,13 +172,13 @@
                   <span class="fa fa-star"></span>
                 </p>
                 <p class="price">$00.00</p>
-                <a href="#book3" class="view-me">View Me</a>
-                <a href="#book3" class="buy">Buy</a>
+                <a href="book6-details.htm" class="view-me">View Me</a>
+                <a href="book6-details.htm" class="buy">Buy</a>
               </div>
             </div>
           </div>
           <div class="book-item">
-            <img src="assets/images/books/owl-wisdom.jpg" alt="Book 1">
+            <img src="assets/images/books/Politics for Sale.png" alt="Book 8">
             <div class="book-overlay">
               <div class="book-details">
                 <p class="rating">
@@ -189,13 +189,13 @@
                   <span class="fa fa-star"></span>
                 </p>
                 <p class="price">$00.00</p>
-                <a href="#book4" class="view-me">View Me</a>
-                <a href="#book4" class="buy">Buy</a>
+                <a href="book8-details.htm" class="view-me">View Me</a>
+                <a href="book8-details.htm" class="buy">Buy</a>
               </div>
             </div>
           </div>
           <div class="book-item">
-            <img src="assets/images/books/particles of wisdom.jpg" alt="Book 2">
+            <img src="assets/images/books/particles of wisdom.jpg" alt="Book 4">
             <div class="book-overlay">
               <div class="book-details">
                 <p class="rating">
@@ -206,13 +206,13 @@
                   <span class="fa fa-star"></span>
                 </p>
                 <p class="price">$6.99</p>
-                <a href="#book5" class="view-me">View Me</a>
-                <a href="#book5" class="buy">Buy</a>
+                <a href="book4-details.htm" class="view-me">View Me</a>
+                <a href="book4-details.htm" class="buy">Buy</a>
               </div>
             </div>
           </div>
           <div class="book-item">
-            <img src="assets/images/books/kbi-back.png" alt="Book 3">
+            <img src="assets/images/books/kbi-back.png" alt="Book 2">
             <div class="book-overlay">
               <div class="book-details">
                 <p class="rating">
@@ -223,7 +223,7 @@
                   <span class="fa fa-star"></span>
                 </p>
                 <p class="price">$3.99</p>
-                <a href="#book6" class="view-me">View Me</a>
+                <a href="book2-details.htm" class="view-me">View Me</a>
                 <a target="_blank" href="https://a.co/d/2KpZVBQ" class="buy">Buy</a>
               </div>
             </div>
@@ -234,7 +234,7 @@
     
 
 
-    <section class="our-facts">
+    <section class="our-facts" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -326,11 +326,11 @@
           <ul>
             <li>
               <h6>Phone Number</h6>
-              <span>+233 54-355-0766</span>
+              <span><a href="tel:+233543550766">+233 54-355-0766</a></span>
             </li>
             <li>
               <h6>Email Address</h6>
-              <span>info@adkaypublications.com</span>
+              <span><a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></span>
             </li>
             <li>
               <h6>Website URL</h6>
@@ -342,6 +342,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Footer Section -->
 <footer class="footer">
@@ -361,49 +362,10 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
  
-  <script src="assets/js/old/owl-carousel.js"></script>
-
-
-
-  <script src="assets/js/old/slick-slider.js"></script>
-  <script src="assets/js/old/custom.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+  <script src="assets/js/custom.js"></script>
   <script>
-      //according to loftblog tut
-      $('.nav li:first').addClass('active');
-
-      var showSection = function showSection(section, isAnimate) {
-        var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-          $('body, html').animate({
-            scrollTop: reqSectionPos },
-          800);
-        } else {
-          $('body, html').scrollTop(reqSectionPos);
-        }
-
-      };
-
-      var checkSection = function checkSection() {
-        $('.section').each(function () {
-          var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-            reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-          }
-        });
-      };
-
       $(document).ready(function(){
         $('#book-carousel').slick({
           infinite: true,

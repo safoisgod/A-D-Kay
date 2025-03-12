@@ -7,25 +7,15 @@
     <title>A-D Kay Publications</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/old/owl.css">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
+ 
     <link rel="stylesheet" href="assets/css/header.css">
-
-    <!-- Add Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <link rel="stylesheet" href="assets/css/our-books.css"> <!-- Link to updated CSS -->
+    <link rel="stylesheet" href="assets/css/our-books.css"> 
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
 </head>
 
 <body>
@@ -40,7 +30,7 @@
                 <ul class="menu-space">
                     <li><a href="index.htm">HOME</a></li>
                     <li><a href="books.htm">BOOK COLLECTION</a></li>
-                    <li><a href="about.htm">ABOUT US</a></li>
+                    <li><a href="index.htm#about">ABOUT US</a></li>
                     <li><a href="#contact">CONTACT US</a></li>
                 </ul>
                 <div class="hamburger-icon" onclick="toggleMenu()">
@@ -57,124 +47,202 @@
         <div class="search-filter-container">
             <!-- Search Box and Filter side by side -->
             <div class="search-filter-box">
-                <input type="text" class="search-box" placeholder="Search for books..." />
+                <input type="text" class="search-box" placeholder="Search for books,authors..." />
                 <select class="filter-box">
                     <option value="all">All Categories</option>
                     <option value="fiction">Fiction</option>
-                    <option value="nonfiction">Nonfiction</option>
-                    <option value="mystery">Mystery</option>
+                    <option value="history">History</option>
+                    <option value="poetry">Poetry</option>
+                    <option value="young adult">Young Adult</option>
+                    <option value="education">Education</option>
+                    <option value="culture">Culture</option>
+                    <option value="short stories">Short Stories</option>
+                    <option value="wisdom">Wisdom</option>
+                    <option value="romance">Romance</option>
                 </select>
             </div>
         </div>
     </section>
 
     <!-- Book Section -->
-    <section class="book-section">
+    <section class="book-section" id="scroll-stop">
         <div class="section-container">
             <div class="book-list">
                 <!-- Book Item 1 -->
-                <div class="book-item" data-category="fiction">
+                <div class="book-item" data-category="fiction,history,culture">
                     <img src="assets/images/books/Culture Brewed in an African Pot.png" alt="Book 1">
                     <div class="book-overlay">
                         <div class="book-details">
-                            <div class="book-title">Book Title 1</div>
-                            <div class="author-name">Author Name</div>
+                            <div class="book-title">Culture Brewed in an African Pot</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
                             <div class="rating">
                                 <span class="checked">⭐⭐⭐⭐</span>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="view-btn">View Me</a>
-                                <a href="#" class="buy-btn">Buy Me</a>
+                                <a href="book1-details.htm" class="view-me">View Me</a>
+                                <a href="book1-details.htm" class="buy">Buy Me</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Book Item 2 -->
-                <div class="book-item" data-category="fiction">
+                <div class="book-item" data-category="Young Adult,fiction,education">
                     <img src="assets/images/books/kbi-front.png" alt="Book 2">
                     <div class="book-overlay">
                         <div class="book-details">
-                            <div class="book-title">Book Title 2</div>
-                            <div class="author-name">Author Name</div>
+                            <div class="book-title">Killed by Illiteracy</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
                             <div class="rating">
                                 <span class="checked">⭐⭐⭐⭐</span>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="view-btn">View Me</a>
-                                <a href="#" class="buy-btn">Buy Me</a>
+                                <a href="book2-details.htm" class="view-me">View Me</a>
+                                <a href="https://a.co/d/2KpZVBQ" class="buy">Buy Me</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Book Item 3 -->
-                <div class="book-item" data-category="nonfiction">
+                <div class="book-item" data-category="Young Adult,fiction,education">
                     <img src="assets/images/books/kbi-back.png" alt="Book 3">
                     <div class="book-overlay">
                         <div class="book-details">
-                            <div class="book-title">Book Title 3</div>
-                            <div class="author-name">Author Name</div>
+                            <div class="book-title">Killed by Illiteracy</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
                             <div class="rating">
                                 <span class="checked">⭐⭐⭐⭐</span>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="view-btn">View Me</a>
-                                <a href="#" class="buy-btn">Buy Me</a>
+                                <a href="book2-details.htm" class="view-me">View Me</a>
+                                <a href="https://a.co/d/2KpZVBQ" class="buy">Buy Me</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Book Item 4 -->
-                <div class="book-item" data-category="mystery">
+                <div class="book-item" data-category="fiction,short stories,wisdom">
                     <img src="assets/images/books/owl-wisdom.jpg" alt="Book 4">
                     <div class="book-overlay">
                         <div class="book-details">
-                            <div class="book-title">Book Title 4</div>
-                            <div class="author-name">Author Name</div>
+                            <div class="book-title">Particles of Wisdom 1</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
                             <div class="rating">
                                 <span class="checked">⭐⭐⭐⭐</span>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="view-btn">View Me</a>
-                                <a href="#" class="buy-btn">Buy Me</a>
+                                <a href="book4-details.htm" class="view-me">View Me</a>
+                                <a href="book4-details.htm" class="buy">Buy Me</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Book Item 5 -->
-                <div class="book-item" data-category="fiction">
+                <div class="book-item" data-category="fiction,short stories,wisdom">
                     <img src="assets/images/books/particles of wisdom.jpg" alt="Book 5">
                     <div class="book-overlay">
                         <div class="book-details">
-                            <div class="book-title">Book Title 5</div>
-                            <div class="author-name">Author Name</div>
+                            <div class="book-title">Particles of Wisdom 2</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
                             <div class="rating">
                                 <span class="checked">⭐⭐⭐⭐</span>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="view-btn">View Me</a>
-                                <a href="#" class="buy-btn">Buy Me</a>
+                                <a href="book4-details.htm" class="view-me">View Me</a>
+                                <a href="book4-details.htm" class="buy">Buy Me</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Book Item 6 -->
-                <div class="book-item" data-category="nonfiction">
+                <div class="book-item" data-category="fiction,education">
                     <img src="assets/images/books/sok-front.jpg" alt="Book 6">
                     <div class="book-overlay">
                         <div class="book-details">
-                            <div class="book-title">Book Title 6</div>
-                            <div class="author-name">Author Name</div>
+                            <div class="book-title">Son of a King</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
                             <div class="rating">
                                 <span class="checked">⭐⭐⭐⭐</span>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="view-btn">View Me</a>
-                                <a href="#" class="buy-btn">Buy Me</a>
+                                <a href="book6-details.htm" class="view-me">View Me</a>
+                                <a href="book6-details.htm" class="buy">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 7 -->
+                <div class="book-item" data-category="Poetry,Romance">
+                    <img src="assets/images/books/M&M.png" alt="Book 7">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">Moonlight & Melodies</div>
+                            <div class="author-name">Necr0se Writes</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="book7-details.htm" class="view-me">View Me</a>
+                                <a href="book7-details.htm" class="buy">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 8 -->
+                <div class="book-item" data-category="politics,fiction">
+                    <img src="assets/images/books/Politics for Sale.png" alt="Book 8">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">Politics for Sale</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="book8-details.htm" class="view-me">View Me</a>
+                                <a href="book8-details.htm" class="buy">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 9 -->
+                <div class="book-item" data-category="fiction,history">
+                    <img src="assets/images/books/King's Dilemma.png" alt="Book 9">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">the King's Dilemma</div>
+                            <div class="author-name">Nkay</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="book9-details.htm" class="view-me">View Me</a>
+                                <a href="book9-details.htm" class="buy">Buy Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 10 -->
+                <div class="book-item" data-category="education, french">
+                    <img src="assets/images/books/french composition.png" alt="Book 10">
+                    <div class="book-overlay">
+                        <div class="book-details">
+                            <div class="book-title">French Composition</div>
+                            <div class="author-name">Ampem-Daako Kay</div>
+                            <div class="rating">
+                                <span class="checked">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="book10-details.htm" class="view-me">View Me</a>
+                                <a href="book10-details.htm" class="buy">Buy Me</a>
                             </div>
                         </div>
                     </div>
@@ -183,43 +251,140 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Bookstore. All Rights Reserved.</p>
-    </footer>
+    <section class="contact-us" id="contact">
+        <div class="container">
+          <div class="row">
+            <!-- Left side: Contact Form -->
+            <div class="col-lg-9">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Let's Get in Touch</h2>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+      
+            <!-- Right side: Contact Info -->
+            <div class="col-lg-3">
+              <div class="right-info">
+                <ul>
+                  <li>
+                    <h6>Phone Number</h6>
+                    <span><a href="tel:+233543550766">+233 54-355-0766</a></span>
+                  </li>
+                  <li>
+                    <h6>Email Address</h6>
+                    <span><a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></span>
+                  </li>
+                  <li>
+                    <h6>Website URL</h6>
+                    <span>www.adkaypublications.com</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <script src="assets/js/old/custom.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchBox = document.querySelector('.search-box');
-            const filterBox = document.querySelector('.filter-box');
-            const bookItems = document.querySelectorAll('.book-item');
+      
+      
+      <!-- Footer Section -->
+      <footer class="footer">
+        <p>Copyright © 2025 A-D Kay Publications. All Rights Reserved.</p>
+      </footer>
 
-            // Function to filter the books
-            function filterBooks() {
-                const searchQuery = searchBox.value.toLowerCase();
-                const selectedCategory = filterBox.value;
 
-                bookItems.forEach(item => {
-                    const bookTitle = item.querySelector('.book-title').textContent.toLowerCase();
-                    const bookCategory = item.getAttribute('data-category'); // Assume each book has a data-category
 
-                    let matchesSearch = bookTitle.includes(searchQuery);
-                    let matchesCategory = (selectedCategory === 'all' || selectedCategory === bookCategory);
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                    if (matchesSearch && matchesCategory) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
+ 
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+  <script src="assets/js/custom.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const searchBox = document.querySelector('.search-box');
+    const filterBox = document.querySelector('.filter-box');
+    const bookItems = document.querySelectorAll('.book-item');
+
+    // Function to filter the books
+    function filterBooks() {
+        const searchQuery = searchBox.value.toLowerCase();
+        const selectedCategory = filterBox.value;
+
+        bookItems.forEach(item => {
+            const bookTitle = item.querySelector('.book-title').textContent.toLowerCase();
+            const bookAuthor = item.querySelector('.author-name').textContent.toLowerCase();
+            const bookCategories = item.getAttribute('data-category').toLowerCase().split(','); // Split the categories
+
+            // Check if the search query matches either the title or the author
+            let matchesSearch = bookTitle.includes(searchQuery) || bookAuthor.includes(searchQuery);
+            let matchesCategory = (selectedCategory === 'all' || bookCategories.includes(selectedCategory.toLowerCase()));
+
+            if (matchesSearch && matchesCategory) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
             }
-
-            // Event listeners for search and filter
-            searchBox.addEventListener('input', filterBooks);
-            filterBox.addEventListener('change', filterBooks);
         });
-    </script>
+    }
+
+    // Event listeners for search and filter
+    searchBox.addEventListener('input', filterBooks);
+    filterBox.addEventListener('change', filterBooks);
+        });
+
+
+
+      var checkSection = function checkSection() {
+        $('.section').each(function () {
+          var
+          $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var
+            currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+            reqLink.closest('li').addClass('active').
+            siblings().removeClass('active');
+          }
+        });
+      };
+
+  </script>
+
 </body>
 
 </html>
