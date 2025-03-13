@@ -158,7 +158,7 @@ header.fixed {
    ================================ */
 
 /* Mobile menu layout */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .menu-space {
         display: none; /* Initially hidden */
         flex-direction: column;

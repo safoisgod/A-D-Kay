@@ -139,7 +139,7 @@
      ------------------------------- */
   
   /* Adjustments for smaller screens (max-width: 767px) */
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     /* Title font size adjustment for small screens */
     section.our-facts h2 {
       font-size: 32px;

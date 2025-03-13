@@ -125,7 +125,7 @@ section.contact-us .right-info ul li:last-child {
 
 /* List Item Title Styling */
 section.contact-us .right-info ul li h6 {
-    color: #fff;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -138,10 +138,11 @@ section.contact-us .right-info ul li span {
     font-size: 18px;
     color: #fff;
     font-weight: 700;
-
+    text-decoration: none;
 }
 section.contact-us .right-info ul li span a{
   color: #ffffff;
+  text-decoration: none;
 }
 
 

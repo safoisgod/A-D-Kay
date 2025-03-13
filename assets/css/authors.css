@@ -1,0 +1,125 @@
+/* General Author List Section */
+.author-list-section {
+    position: relative; 
+    background-image: url(../images/background/bookshelve.jpg); 
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 50px;
+    margin-top: 0; 
+}
+
+/* Darker overlay on top of the background image */
+.author-list-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Darker background for text contrast */
+    z-index: 1; 
+}
+
+/* Ensuring the container content sits above the overlay */
+.author-list-section .container {
+    position: relative; 
+    z-index: 2; 
+}
+
+.author-list-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff; /* Ensure heading is visible on dark overlay */
+}
+
+/* Author Grid for the list of authors */
+.author-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Individual Author Card */
+.author-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Author Card Image */
+.author-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Author Name */
+.author-card h3 {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    color: #64def3;
+}
+
+/* Author Short Bio */
+.author-bio {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Read More Link */
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #1e88e5;
+}
+
+/* Hover effect for author card */
+.author-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer Styling */
+footer.footer {
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .author-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .author-card {
+        padding: 15px;
+    }
+
+    .author-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .author-bio {
+        font-size: 0.95rem;
+    }
+}
