@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ampem-Daako Kay - Author Details</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/book-detail.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/author-details.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header-space">
+        <nav class="navigation-space">
+            <div class="left-side">
+                <a href="index.htm"><img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo"></a>
+            </div>
+            <div class="right-side">
+                <ul class="menu-space">
+                    <li><a href="index.htm">HOME</a></li>
+                    <li><a href="books.htm">BOOK COLLECTION</a></li>
+                    <li><a href="authors.htm">AUTHORS</a></li>
+                    <li><a href="404.htm">BLOG</a></li>
+                    <li><a href="index.htm#about">ABOUT US</a></li>
+                    <li><a href="index.htm#contact">CONTACT US</a></li>
+                </ul>
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Author Details Section -->
+    <section class="author-details-section">
+      <div class="container">
+          <div class="author-header">
+              <img src="assets/images/authors/Ampem-Daako Kay -nb.png" alt="Ampem-Daako Kay" class="author-image">
+              <div class="author-info">
+                  <h1>Ampem-Daako Kay</h1>
+                  <p class="author-role">Author</p>
+                  <p class="author-bio">Ampem-Daako is known for their captivating storytelling, blending fiction and drama seamlessly.</p>
+                  <p class="author-full-bio">Born and raised in a small town, Ampem-Daako Kay's journey into writing began at a young age. Their works often explore themes of human connection, drama, and the unspoken stories of everyday life. With several best-selling books under their belt, Ampem-Daako has become a renowned name in contemporary African literature.</p>
+
+                  <div class="author-details">
+                      <h3>Genres</h3>
+                      <p>Politics, Fiction, Historical Fiction, Education</p>
+                  </div>
+
+                  <div class="author-details">
+                      <h3>Awards</h3>
+                      <ul>
+                          <li>Best Fiction Author 2023</li>
+                          <li>Outstanding Literary Work 2022</li>
+                      </ul>
+                  </div>
+
+                  <div class="author-details">
+                      <h3>Social Media</h3>
+                      <ul class="social-links">
+                          <li><a href="https://www.facebook.com/ampemdaako" target="_blank">Facebook</a></li>
+                          <li><a href="https://twitter.com/ampemdaako" target="_blank">Twitter</a></li>
+                          <li><a href="https://www.instagram.com/ampemdaako" target="_blank">Instagram</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <section class="contact-us" id="contact">
+        <div class="container">
+          <div class="row">
+            <!-- Left side: Contact Form -->
+            <div class="col-lg-9">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Let's Get in Touch</h2>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+      
+            <!-- Right side: Contact Info -->
+            <div class="col-lg-3">
+              <div class="right-info">
+                <ul>
+                  <li>
+                    <h6>Phone Number</h6>
+                    <span><a href="tel:+233543550766">+233 54-355-0766</a></span>
+                  </li>
+                  <li>
+                    <h6>Email Address</h6>
+                    <span><a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></span>
+                  </li>
+                  <li>
+                    <h6>Website URL</h6>
+                    <span>www.adkaypublications.com</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Copyright © 2025 A-D Kay Publications. All Rights Reserved.</p>
+    </footer>
+  
+    <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
