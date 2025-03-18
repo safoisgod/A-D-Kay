@@ -8,8 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     
-    <!-- Additional CSS Files -->
-     <link rel="stylesheet" href="assets/css/old/owl.css">
+
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/buttons.css">
     <link rel="stylesheet" href="assets/css/facts.css">
     <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
 
     <!-- Add Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -67,7 +67,7 @@
         </video>
         <div class="video-overlay">
             <div class="content">
-                <h6>Hello BookLover</h6>
+                <h6>Hello Book Lover</h6>
                 <h2>Welcome to A-D Kay Publications</h2>
                 <p>A-D Kay Publications, we are dedicated to bringing exceptional stories, insightful knowledge, and creative voices to the world. Our passion is to empower authors, readers, and the literary community through high-quality publications.</p>
                 <div class="main-button-blue">
@@ -173,7 +173,7 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star"></span>
                 </p>
-                <p class="price">$00.00</p>
+                <p class="price">$0.00</p>
                 <a href="book6-details.htm" class="view-me">View Me</a>
                 <a href="book6-details.htm" class="buy">Buy</a>
               </div>
@@ -190,7 +190,7 @@
                   <span class="fa fa-star"></span>
                   <span class="fa fa-star"></span>
                 </p>
-                <p class="price">$00.00</p>
+                <p class="price">$0.00</p>
                 <a href="book8-details.htm" class="view-me">View Me</a>
                 <a href="book8-details.htm" class="buy">Buy</a>
               </div>
@@ -233,6 +233,45 @@
         </div>
       </div>
     </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+      <div class="container">
+          <h2>Latest Blog Posts</h2>
+          <div class="blog-posts" id="blog-carousel">
+              <article class="blog-post">
+                  <img src="assets/images/blog/Killed by Illiteracy mockup 1.png" alt="Blog Image">
+                  <h3>Exciting New Release - Killed by Illiteracy by Ampem-Daako Kay</h3>
+                  <p>Announcements for new book releases, giving readers insights into the plot, characters, and themes of the book, as well as details on where to purchase or pre-order.</p>
+                  <a href="#">Read More</a>
+              </article>
+              <article class="blog-post">
+                  <img src="assets/images/blog/book-club.jpg" alt="Blog Image">
+                  <h3>Join Our Monthly Book Club: Ampem-Daako Book Club</h3>
+                  <p>Information about book clubs, both online and offline, featuring the latest book discussions, author Q&As, and recommendations for group reads.</p>
+                  <a href="#">Read More</a>
+              </article>
+              <article class="blog-post">
+                  <img src="assets/images/authors/Ampem-Daako Kay -nb.png" alt="Blog Image">
+                  <h3>Spotlight on Ampem-Daako Kay: The Journey to Killed by Illiteracy</h3>
+                  <p>Features focused on one author, exploring their writing journey, books, influences, and personal stories, giving readers an intimate look into the author’s career.</p>
+                  <a href="#">Read More</a>
+              </article>
+              <article class="blog-post">
+                <img src="assets/images/blog/submit-book.jpg" alt="Blog Image">
+                <h3>How to Submit Your Manuscript to A-D Kay Publications</h3>
+                <p>A guide for new authors on how to get their work published, what publishers are looking for, and tips to increase chances of success in a competitive market.</p>
+                <a href="#">Read More</a>
+              </article>
+              <article class="blog-post">
+                  <img src="assets/images/blog/memorial.jpg" alt="Blog Image">
+                  <h3>Upcoming Event: Memorial Service for Ampem-Daako Kay</h3>
+                  <p>Join us for a memorial service to honor the life and legacy of Kojo Ampem-Darko, the visionary behind A-D Kay Publications.</p>
+                  <a href="#">Read More</a>
+            </article>
+            </div>
+        </div>
+     </section>
     
 
 
@@ -283,67 +322,78 @@
       </div>
     </section>
 
-  <section class="contact-us" id="contact">
-  <div class="container">
-    <div class="row">
-      <!-- Left side: Contact Form -->
-      <div class="col-lg-9">
-        <form id="contact" action="" method="post">
-          <div class="row">
-            <div class="col-lg-12">
-              <h2>Let's Get in Touch</h2>
+    <<section class="contact-us" id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- Left side: Contact Form -->
+          <div class="col-lg-9">
+            <form id="contact" action="https://formsubmit.co/4e48fa66b4c7a7ea7ee63c64b72215df" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h2>Let's Get in Touch</h2>
+                </div>
+                <div class="col-lg-4">
+                  <fieldset>
+                    <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-4">
+                  <fieldset>
+                    <input name="email" type="email" id="email" placeholder="YOUR EMAIL..." required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-4">
+                  <fieldset>
+                    <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+            
+            <!-- Success Message -->
+            <div id="success-message" style="display:none;">
+              <p>Thank you for your message! We'll get back to you soon.</p>
             </div>
-            <div class="col-lg-4">
-              <fieldset>
-                <input name="name" type="text" id="name" placeholder="YOUR NAME...*" required>
-              </fieldset>
-            </div>
-            <div class="col-lg-4">
-              <fieldset>
-                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required>
-              </fieldset>
-            </div>
-            <div class="col-lg-4">
-              <fieldset>
-                <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required>
-              </fieldset>
-            </div>
-            <div class="col-lg-12">
-              <fieldset>
-                <textarea name="message" id="message" placeholder="YOUR MESSAGE..." required></textarea>
-              </fieldset>
-            </div>
-            <div class="col-lg-12">
-              <fieldset>
-                <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-              </fieldset>
+            
+            <!-- Error Message -->
+            <div id="error-message" style="display:none;">
+              <p>Oops! Something went wrong. Please try again later.</p>
             </div>
           </div>
-        </form>
-      </div>
-
-      <!-- Right side: Contact Info -->
-      <div class="col-lg-3">
-        <div class="right-info">
-          <ul>
-            <li>
-              <h6>Phone Number</h6>
-              <span><a href="tel:+233543550766">+233 54-355-0766</a></span>
-            </li>
-            <li>
-              <h6>Email Address</h6>
-              <span><a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></span>
-            </li>
-            <li>
-              <h6>Website URL</h6>
-              <span>www.adkaypublications.com</span>
-            </li>
-          </ul>
+    
+          <!-- Right side: Contact Info -->
+          <div class="col-lg-3">
+            <div class="right-info">
+              <ul>
+                <li>
+                  <h6>Phone Number</h6>
+                  <span><a href="tel:+23412345">+23412345</a></span>
+                </li>
+                <li>
+                  <h6>Email Address</h6>
+                  <span><a href="mailto:info@adkayts.com">info@adkayt.com</a></span>
+                </li>
+                <li>
+                  <h6>Website URL</h6>
+                  <span>www.adkayt.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+    
 
 
 <!-- Footer Section -->
@@ -364,7 +414,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
  
-  <script src="assets/js/owl-carousel.js"></script>
+
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
   <script>
@@ -404,6 +454,85 @@
         });
       });
 
+      $(document).ready(function(){
+        $('#blog-carousel').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4900,
+          responsive: [
+            {
+              
+              breakpoint: 1500,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
+            },
+
+            {
+              
+              breakpoint: 1000,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            },
+          ]
+        });
+      });
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+    // Get the form element
+    const form = document.getElementById('contact');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+
+    // Add event listener for form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent the default form submission
+
+      const formData = new FormData(form); // Get form data
+
+      // Display loading message while the request is being processed
+      successMessage.style.display = 'none'; 
+      errorMessage.style.display = 'none'; 
+
+      // Show a loading indicator if necessary (optional)
+      console.log("Form submitted"); // Log the form submission for debugging
+
+      // Create an AJAX request to submit the form
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        // Handle non-200 responses
+        if (!response.ok) {
+          throw new Error('Submission failed!');
+        }
+        return response.json(); // Try to parse the response as JSON
+      })
+      .then(data => {
+        // Check if the submission was successful
+        if (data.success) {
+          successMessage.style.display = 'block';
+          errorMessage.style.display = 'none';
+          form.reset(); // Reset form after successful submission
+          console.log("Form successfully submitted.");
+        } else {
+          throw new Error('Submission failed!');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        errorMessage.style.display = 'block'; // Show error message
+        successMessage.style.display = 'none'; // Hide success message
+      });
+    });
+  });
 
   </script>
 
