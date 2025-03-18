@@ -1,0 +1,143 @@
+/* ================================
+   SERVICE SECTION STYLES
+   ================================ */
+
+/* Main service section container */
+.service-section {
+  position: relative;
+  background-image: url(../images/background/bookshelve.jpg); /* Background image */
+  background-position: center center;
+  background-attachment: fixed; /* Fixed background scrolls with page */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  z-index: 0;
+}
+
+/* Overlay for the service items container */
+.service-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%); /* Dark gradient overlay */
+  z-index: 1;
+}
+
+/* Container for the heading and description */
+.service-section .text-container {
+  position: relative;
+  padding-bottom: 10px;
+  z-index: 2;
+}
+
+/* Section heading styling */
+.service-section .section-heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Short description below the heading */
+.service-section .section-description {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  z-index: 2;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Grid container for the service items */
+.service-section .container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns on large screens */
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1500px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual service item styling */
+.service-section .container .item {
+  background-color: rgba(255, 255, 255, 0.3); 
+  color: #64def3;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Hover effects for service items */
+.service-section .container .item:hover {
+  background-color: #64def3;
+  color: #fff;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* Image inside service item */
+.service-section .container .item img {
+  max-width: 50px; 
+  transition: transform 0.5s ease;
+}
+
+/* Hover effect on image */
+.service-section .container .item:hover img {
+  transform: scale(1.2); 
+}
+
+/* Service item title (h3) */
+.service-section .container .item h3 {
+  margin-top: 10px;
+  transition: color 0.25s ease;
+}
+
+/* Hover effect on title */
+.service-section .container .item:hover h3 {
+  color: #000000;
+}
+
+/* Description text inside service item (p) */
+.service-section .container .item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  transition: color 0.5s ease;
+}
+
+/* Hover effect on description */
+.service-section .container .item:hover p {
+  color: #666;
+}
+
+/* ================================
+   MEDIA QUERIES FOR RESPONSIVENESS
+   ================================ */
+
+/* For screens smaller than 1000px (tablet size) */
+@media (max-width: 1000px) {
+  .service-section .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+/* For screens smaller than 650px (mobile size) */
+@media (max-width: 650px) {
+  .service-section .container {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+}
