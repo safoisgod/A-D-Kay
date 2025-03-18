@@ -1,0 +1,176 @@
+/* ================================
+   FOOTER STYLES
+   ================================ */
+
+/* Footer Styles */
+.footer {
+    background-color: #f1f1f1; /* Lighter gray background for better contrast */
+    color: #333333; /* Dark text color for readability */
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Logo Section */
+.footer-logo {
+    flex-basis: 20%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+/* Social Links Section */
+.footer-social {
+    flex-basis: 20%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-social h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links ul {
+    list-style: none;  /* Remove bullet points */
+    padding: 0;
+    margin: 0;  /* Ensure there's no extra space */
+}
+
+.social-icon {
+    font-size: 20px;
+    color: #555555; /* Light gray for social icons */
+    transition: color 0.3s ease;
+    border-radius: 50%; /* Make icons round */
+    padding: 10px; /* Add some padding around icons */
+    background-color: transparent; /* Ensure background is transparent */
+    border: none; /* Remove any default borders */
+    outline: none; /* Remove outline/focus ring */
+}
+
+/* Hover Effect for Social Icons */
+.social-icon:hover {
+    color: #00bcd4; /* Blue highlight color on hover */
+    background-color: #f1f1f1; /* Light background on hover */
+}
+
+/* Quick Links */
+.footer-links {
+    flex-basis: 30%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.footer-links h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555555; /* Dark gray links */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00bcd4; /* Blue highlight color */
+}
+
+/* Join Us Section */
+.footer-join-us {
+    flex-basis: 30%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.footer-join-us h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.footer-join-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-join-us li {
+    font-size: 16px;
+}
+
+.footer-join-us a {
+    color: #00bcd4; /* Blue color for links */
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer-join-us a:hover {
+    color: #777777; /* White on hover for better contrast */
+}
+
+/* Copyright Section */
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #777777; /* Lighter gray for copyright text */
+}
+
+.footer-bottom a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #00bcd4; /* Blue highlight color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-social, .footer-links, .footer-join-us {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}

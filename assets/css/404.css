@@ -52,16 +52,7 @@
     background-color: #2980b9; /* Darker blue on hover */
 }
 
-/* Footer Styling */
-.footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
+
 
 /* Mobile Responsive */
 @media (max-width: 768px) {

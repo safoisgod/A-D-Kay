@@ -69,6 +69,8 @@
     width: 30%;
     overflow: hidden;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-post:hover {
@@ -76,7 +78,7 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Blog Post Image Styling with Fixed Size */
+/* Blog Post Image Styling */
 .blog-post img {
     width: 100%;
     height: 300px; /* Fixed height for all images */
@@ -98,6 +100,12 @@
     font-size: 14px;
     color: #fafafa;
     margin-bottom: 20px;
+    height: 60px; /* Set a fixed height for the text area */
+    overflow: hidden; /* Ensure content is clipped */
+    text-overflow: ellipsis; /* Add ellipsis for overflow content */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit the content to 3 lines */
+    -webkit-box-orient: vertical;
 }
 
 /* Blog Post Read More Link */
