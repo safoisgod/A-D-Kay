@@ -1,0 +1,130 @@
+/* ================================
+   BLOG SECTION STYLES
+   ================================ */
+
+/* Blog Section Background and Layout */
+.blog-section {
+    position: relative;
+    background-image: url(../images/background/bookshelve.jpg); /* Background image */
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 50px; /* Adjusted padding */
+    text-align: center;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Dark Overlay for better text visibility */
+.blog-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Dark background for contrast */
+    z-index: 1;
+}
+
+/* Container for content */
+.blog-section .container {
+    width: 75%; /* Centered width */
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Blog Title Styling */
+.blog-section h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Blog Post Container */
+.blog-posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+/* Blog Post Styling */
+.blog-post {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 10px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 30%;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Blog Post Image Styling with Fixed Size */
+.blog-post img {
+    width: 100%;
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures that the image is properly cropped */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Blog Post Title */
+.blog-post h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Blog Post Excerpt */
+.blog-post p {
+    font-size: 14px;
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+/* Blog Post Read More Link */
+.blog-post a {
+    color: #64def3;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* ================================
+   RESPONSIVE DESIGN ADJUSTMENTS
+   ================================ */
+
+@media (max-width: 850px) {
+    /* Adjustments for Blog Section */
+    .blog-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-post {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .blog-section h2 {
+        font-size: 32px;
+    }
+}

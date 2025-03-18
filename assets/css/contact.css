@@ -12,8 +12,8 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 60px 50px; /* Adjusted padding */
-    margin-top: 0; /* Removed top margin */
+    padding: 60px 50px;
+    margin-top: 0;
 }
 
 /* Dark Overlay for Contact Section */
@@ -38,9 +38,10 @@ section.contact-us .container {
    Contact Form Styling
    ------------------------------- */
 section.contact-us #contact {
-    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     padding: 40px;
+    box-sizing: border-box;
 }
 
 /* Contact Form Heading */
@@ -59,7 +60,7 @@ section.contact-us #contact input,
 section.contact-us #contact textarea {
     width: 100%;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.75); /* Light background for input fields */
+    background-color: rgba(255, 255, 255, 0.75);
     border: none;
     padding: 15px;
     font-size: 13px;
@@ -116,20 +117,12 @@ section.contact-us .right-info ul li {
     padding-bottom: 20px;
 }
 
-/* Remove bottom border for the last list item */
-section.contact-us .right-info ul li:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
 /* List Item Title Styling */
 section.contact-us .right-info ul li h6 {
     color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 10px;
-
 }
 
 /* List Item Content Styling */
@@ -140,37 +133,48 @@ section.contact-us .right-info ul li span {
     font-weight: 700;
     text-decoration: none;
 }
-section.contact-us .right-info ul li span a{
-  color: #ffffff;
-  text-decoration: none;
+
+section.contact-us .right-info ul li span a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
+section.contact-us .right-info ul li span:hover {
+    transform: scale(1.05);
+}
 
+/* Remove bottom border for the last list item */
+section.contact-us .right-info ul li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* -------------------------------
+   Mobile Responsiveness
+   ------------------------------- */
 @media (max-width: 1500px){
+    section.contact-us .right-info {
+        padding: 10px;
+    }
 
-  section.contact-us .right-info {
-    padding: 10px;
-  }
-
-  section.contact-us .right-info ul li span {
-    font-weight: 500;
-  }
-
+    section.contact-us .right-info ul li span {
+        font-weight: 500;
+    }
 }
- 
 
 @media (max-width: 1000px){
-  section.contact-us .right-info ul li h6 {
-    text-align: center;
-  }
-
-  section.contact-us .right-info ul li span {
-    text-align: center;
-  }
-
+    section.contact-us .col-lg-9,
+    section.contact-us .col-lg-3 {
+        width: 100%; /* Stack the columns on smaller screens */
+    }
+    section.contact-us .right-info ul li h6 {
+        text-align: center;
+    }
+    section.contact-us .right-info ul li span {
+        text-align: center;
+    }
 }
-  
-
 
 /* ================================
    FOOTER STYLES
@@ -179,10 +183,10 @@ section.contact-us .right-info ul li span a{
 /* Footer Container Styling */
 footer.footer {
     text-align: center;
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Black text */
+    background-color: #ffffff;
+    color: #000000;
     padding: 10px 0;
-    margin-top: auto; /* Keeps footer at the bottom of the page */
+    margin-top: auto;
 }
 
 /* Footer Text Styling */

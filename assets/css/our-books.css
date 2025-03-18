@@ -217,6 +217,10 @@
 .book-details {
   text-align: center;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
 }
 
 .book-title {
@@ -225,13 +229,13 @@
   margin-bottom: 10px;
 }
 
-.rating {
-  font-size: 0.8rem;
-  margin-bottom: 10px;
+.book-details .rating {
+  font-size: 16px;
+  margin: 5px 0;
 }
 
-.checked {
-  color: #f39c12; /* Gold color for checked rating */
+.book-details .rating .checked {
+  color: orange;
 }
 
 /* --------------------------------- */ 

@@ -59,6 +59,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+
 /* View Me Button Hover Effect */
 .book-details .view-me:hover {
     color: rgb(0, 0, 0);
@@ -80,6 +81,7 @@
     border: none;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
+
 }
 
 /* Buy Button Hover Effect */
