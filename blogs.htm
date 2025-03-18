@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Exciting new release of Killed by Illiteracy, a thought-provoking book by Ampem-Daako Kay tackling illiteracy and its effects.">
+    <title>Blog - A-D Kay Publications</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/our-blogs.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header-space">
+        <nav class="navigation-space">
+            <div class="left-side">
+                <a href="index.htm"><img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo"></a>
+            </div>
+            <div class="right-side">
+                <ul class="menu-space">
+                  <li><a href="index.htm">HOME</a></li>
+                  <li><a href="books.htm">BOOK COLLECTION</a></li>
+                  <li><a href="authors.htm">AUTHORS</a></li>
+                  <li><a href="404.htm">BLOG</a></li>
+                  <li><a href="#about">ABOUT US</a></li>
+                  <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search Blog Posts...">
+        <button onclick="searchBlogPosts()">Search</button>
+    </div>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2>Latest Blog Posts</h2>
+            <div class="blog-posts" id="blog-carousel">
+                <!-- Blog Post 1 -->
+                <article class="blog-post">
+                    <img src="assets/images/blog/Killed by Illiteracy mockup 1.png" alt="Blog Image">
+                    <div class="blog-meta">
+                        <span class="author">By Ampem-Daako Kay</span> | 
+                        <span class="date">March 18, 2025</span> | 
+                        <span class="category">Book Release</span>
+                    </div>
+                    <h3>Exciting New Release - Killed by Illiteracy by Ampem-Daako Kay</h3>
+                    <p>Announcements for new book releases, giving readers insights into the plot, characters, and themes of the book, as well as details on where to purchase or pre-order.</p>
+                    <a href="blog-post1.htm">Read More</a>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-post">
+                    <img src="assets/images/blog/book-club.jpg" alt="Blog Image">
+                    <div class="blog-meta">
+                        <span class="author">By Ampem-Daako Kay</span> | 
+                        <span class="date">March 10, 2025</span> | 
+                        <span class="category">Book Club</span>
+                    </div>
+                    <h3>Join Our Monthly Book Club: Ampem-Daako Book Club</h3>
+                    <p>Information about book clubs, both online and offline, featuring the latest book discussions, author Q&As, and recommendations for group reads.</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-post">
+                    <img src="assets/images/authors/Ampem-Daako Kay -nb.png" alt="Blog Image">
+                    <div class="blog-meta">
+                        <span class="author">By Ampem-Daako Kay</span> | 
+                        <span class="date">March 5, 2025</span> | 
+                        <span class="category">Author Spotlight</span>
+                    </div>
+                    <h3>Spotlight on Ampem-Daako Kay: The Journey to Killed by Illiteracy</h3>
+                    <p>Features focused on one author, exploring their writing journey, books, influences, and personal stories, giving readers an intimate look into the author’s career.</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-post">
+                    <img src="assets/images/blog/submit-book.jpg" alt="Blog Image">
+                    <div class="blog-meta">
+                        <span class="author">By Ampem-Daako Kay</span> | 
+                        <span class="date">February 25, 2025</span> | 
+                        <span class="category">Submission Guide</span>
+                    </div>
+                    <h3>How to Submit Your Manuscript to A-D Kay Publications</h3>
+                    <p>A guide for new authors on how to get their work published, what publishers are looking for, and tips to increase chances of success in a competitive market.</p>
+                    <a href="#">Read More</a>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-post">
+                    <img src="assets/images/blog/memorial.jpg" alt="Blog Image">
+                    <div class="blog-meta">
+                        <span class="author">By Ampem-Daako Kay</span> | 
+                        <span class="date">February 20, 2025</span> | 
+                        <span class="category">Event</span>
+                    </div>
+                    <h3>Upcoming Event: Memorial Service for Ampem-Daako Kay</h3>
+                    <p>Join us for a memorial service to honor the life and legacy of Kojo Ampem-Darko, the visionary behind A-D Kay Publications.</p>
+                    <a href="#">Read More</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <a href="index.htm">
+                    <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Logo" class="footer-logo-img">
+                </a>
+            </div>
+        
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="books.htm">Book Collection</a></li>
+                    <li><a href="authors.htm">Authors</a></li>
+                    <li><a href="404.htm">Blog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        
+            <!-- Join Us Section -->
+            <div class="footer-join-us">
+                <h4>Join Us</h4>
+                <ul>
+                    <li><a href="apply.htm">Apply Now</a></li>
+                    <li><a href="join-team.htm">Join Our Team</a></li>
+                    <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
+                </ul>
+            </div>
+        
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            </div>
+        
+            <!-- Copyright & Contact Information -->
+            <div class="footer-bottom">
+            <p>&copy; 2025 A-D Kay Publications. All Rights Reserved.</p>
+            <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
+            </div>
+        </footer>
+
+    <!-- JavaScript for Search Function -->
+    <script>
+        function searchBlogPosts() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let blogPosts = document.querySelectorAll('.blog-post');
+            
+            blogPosts.forEach(post => {
+                let title = post.querySelector('h3').innerText.toLowerCase();
+                let content = post.querySelector('p').innerText.toLowerCase();
+                
+                if (title.includes(input) || content.includes(input)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
