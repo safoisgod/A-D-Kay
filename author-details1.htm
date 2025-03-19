@@ -8,14 +8,15 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+    
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    
     <!-- Custom styles -->
-    <link rel="stylesheet" href="assets/css/book-detail.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
-    <link rel="stylesheet" href="assets/css/author-details.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/main-style.css">
+    <link rel="stylesheet" href="assets/css/authors.css">
 </head>
 
 <body>
@@ -31,7 +32,7 @@
                     <li><a href="index.htm">HOME</a></li>
                     <li><a href="books.htm">BOOK COLLECTION</a></li>
                     <li><a href="authors.htm">AUTHORS</a></li>
-                    <li><a href="404.htm">BLOG</a></li>
+                    <li><a href="blogs.htm">BLOG</a></li>
                     <li><a href="index.htm#about">ABOUT US</a></li>
                     <li><a href="index.htm#contact">CONTACT US</a></li>
                 </ul>
@@ -55,12 +56,12 @@
                   <p class="author-bio">Ampem-Daako is known for their captivating storytelling, blending fiction and drama seamlessly.</p>
                   <p class="author-full-bio">Born and raised in a small town, Ampem-Daako Kay's journey into writing began at a young age. Their works often explore themes of human connection, drama, and the unspoken stories of everyday life. With several best-selling books under their belt, Ampem-Daako has become a renowned name in contemporary African literature.</p>
 
-                  <div class="author-details">
+                  <div class="ad-author-details genre">
                       <h3>Genres</h3>
                       <p>Politics, Fiction, Historical Fiction, Education</p>
                   </div>
 
-                  <div class="author-details">
+                  <div class="ad-author-details awards">
                       <h3>Awards</h3>
                       <ul>
                           <li>Best Fiction Author 2023</li>
@@ -68,7 +69,7 @@
                       </ul>
                   </div>
 
-                  <div class="author-details">
+                  <div class="ad-author-details social-media">
                       <h3>Social Media</h3>
                       <ul class="social-links">
                           <li><a href="https://www.facebook.com/ampemdaako" target="_blank">Facebook</a></li>
@@ -198,7 +199,17 @@
       <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
       </div>
   </footer>
-  
+      <!--EmailJS -->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "AIpZSo9e2QEerRRAg",
+            });
+        })();
+    </script>
     <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

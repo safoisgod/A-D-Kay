@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - A-D Kay Publications</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+    <link rel="stylesheet" href="assets/css/main-style.css">
+    
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Join Our Team</title>
+    <style>
+        section {
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .job-listings {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .job-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-card h3 {
+            margin-top: 0;
+        }
+
+        .job-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .job-card button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .job-card button:hover {
+            background-color: #555;
+        }
+
+        .application-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .application-form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .application-form input, .application-form textarea, .application-form input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .application-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .application-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header-space">
+        <nav class="navigation-space">
+            <div class="left-side">
+                <a href="index.htm"><img class="logo" src="assets/images/A-D KAY-nb1.png" alt="Logo"></a>
+            </div>
+            <div class="right-side">
+                <ul class="menu-space">
+                  <li><a href="index.htm">HOME</a></li>
+                  <li><a href="books.htm">BOOK COLLECTION</a></li>
+                  <li><a href="authors.htm">AUTHORS</a></li>
+                  <li><a href="blogs.htm">BLOG</a></li>
+                  <li><a href="#about">ABOUT US</a></li>
+                  <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<section class="container">
+    <h2 class="section-title">Open Positions</h2>
+
+    <div class="job-listings">
+        <div class="job-card">
+            <h3>Software Developer</h3>
+            <p>We are looking for a talented and passionate software developer to join our team. Apply now and help build innovative products.</p>
+            <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+            <h3>Product Manager</h3>
+            <p>Do you have a knack for managing products and leading teams? We’re looking for a skilled product manager to lead our exciting new projects.</p>
+            <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+            <h3>Marketing Specialist</h3>
+            <p>Help us create amazing marketing strategies and campaigns! Join our marketing team and make an impact on our brand.</p>
+            <button>Apply Now</button>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Application Form</h2>
+
+    <div class="application-form">
+        <form action="/submit-application" method="POST" enctype="multipart/form-data">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Your Full Name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email Address">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
+
+            <label for="position">Position Applying For</label>
+            <input type="text" id="position" name="position" required placeholder="Position Name">
+
+            <label for="coverLetter">Cover Letter</label>
+            <textarea id="coverLetter" name="coverLetter" rows="6" placeholder="Write your cover letter here..." required></textarea>
+
+            <label for="resume">Upload Your Resume (PDF only)</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+          <a href="index.htm">
+              <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Logo" class="footer-logo-img">
+          </a>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+              <li><a href="index.htm">Home</a></li>
+              <li><a href="books.htm">Book Collection</a></li>
+              <li><a href="authors.htm">Authors</a></li>
+              <li><a href="404.htm">Blog</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+          </ul>
+      </div>
+
+      <!-- Join Us Section -->
+      <div class="footer-join-us">
+          <h4>Join Us</h4>
+          <ul>
+              <li><a href="apply.htm">Apply Now</a></li>
+              <li><a href="join-team.htm">Join Our Team</a></li>
+              <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
+          </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-social">
+          <h4>Follow Us</h4>
+          <ul class="social-links">
+              <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                  <i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">
+                  <i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                  <i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                  <i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+      </div>
+    </div>
+
+    <!-- Copyright & Contact Information -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 A-D Kay Publications. All Rights Reserved.</p>
+      <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
