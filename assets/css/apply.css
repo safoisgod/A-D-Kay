@@ -1,0 +1,171 @@
+/* General Container Styling */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Section Title */
+h2.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4C4C4C;
+    font-weight: 600;
+}
+
+/* Job Listings Section */
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: stretch;
+}
+
+.job-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-left: 4px solid #64def3;
+}
+
+.job-card:hover {
+    transform: translateY(-10px);
+}
+
+.job-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.apply-btn {
+    background-color: #64def3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #00bcd4;
+}
+
+/* Application Form Section */
+#application-form {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-lg-9 {
+    flex: 1;
+}
+
+.col-lg-4 {
+    flex: 0 0 30%;
+    padding: 0 15px;
+}
+
+.col-lg-12 {
+    flex: 0 0 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #10B981; /* Green button color */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #00bcd4; /* Darker green on hover */
+}
+
+/* Other Position Input Field */
+#otherPositionInput {
+    display: none;
+}
+
+#otherPositionInput input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-listings {
+        grid-template-columns: 1fr; /* Stack the job cards vertically */
+    }
+
+    .col-lg-4 {
+        flex: 0 0 100%; /* Full width for each input field */
+    }
+
+    .col-lg-9 {
+        flex: 0 0 100%;
+    }
+
+    /* Increase form input padding for mobile view */
+    input,
+    select,
+    textarea {
+        padding: 14px;
+    }
+
+    /* Button with full-width for mobile */
+    button[type="submit"] {
+        width: 100%;
+        padding: 14px;
+    }
+}

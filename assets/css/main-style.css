@@ -1027,12 +1027,14 @@ section.contact-us .right-info ul li span a {
 
 .footer-join-us li {
     font-size: 16px;
+    text-align: left;
 }
 
 .footer-join-us a {
     color: #00bcd4;
     font-weight: 500;
     text-decoration: none;
+    
 }
 
 .footer-join-us a:hover {
@@ -1123,7 +1125,7 @@ section.contact-us .right-info ul li span a {
 /* -------------------------------
    Buy Button Styling
    ------------------------------- */
-.book-details .buy {
+.buy {
     font-size: 16px;
     margin-top: 20px;
     padding: 10px 20px;
@@ -1138,7 +1140,7 @@ section.contact-us .right-info ul li span a {
 }
 
 /* Buy Button Hover Effect */
-.book-details .buy:hover {
+.buy:hover {
     color: rgb(0, 0, 0);
     background-color: #7ad6f0; /* Lighter blue on hover */
     transform: scale(1.05); /* Slight scale effect */
