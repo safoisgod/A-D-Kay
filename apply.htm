@@ -4,138 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - A-D Kay Publications</title>
+    <title>Apply - A-D Kay Publications</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Slick Carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
-
     <link rel="stylesheet" href="assets/css/main-style.css">
-    
-
-
+    <link rel="stylesheet" href="assets/css/apply.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Join Our Team</title>
-    <style>
-        section {
-            padding: 40px 20px;
-        }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #333;
-        }
-
-        .job-listings {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .job-card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .job-card h3 {
-            margin-top: 0;
-        }
-
-        .job-card p {
-            font-size: 1rem;
-            color: #666;
-        }
-
-        .job-card button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .job-card button:hover {
-            background-color: #555;
-        }
-
-        .application-form {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .application-form label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .application-form input, .application-form textarea, .application-form input[type="file"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
-
-        .application-form button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 15px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        .application-form button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 15px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -164,111 +48,214 @@
         </nav>
     </header>
 
-<section class="container">
-    <h2 class="section-title">Open Positions</h2>
-
-    <div class="job-listings">
-        <div class="job-card">
-            <h3>Software Developer</h3>
-            <p>We are looking for a talented and passionate software developer to join our team. Apply now and help build innovative products.</p>
-            <button>Apply Now</button>
+    <section class="container">
+        <h2 class="section-title">Open Positions</h2>
+    
+        <div class="job-listings">
+            <div class="job-card">
+                <h3>Editor</h3>
+                <p>Join our editorial team and help shape the content that our readers love. We’re looking for an experienced editor to ensure high-quality content and consistency across all of our publications.</p>
+                <!-- Link to application form with query parameter for the position -->
+                <a href="#application-form" class="apply-btn" data-position="Editor">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h3>Content Writer</h3>
+                <p>Are you a wordsmith with a passion for storytelling? We’re looking for a creative content writer to craft engaging articles, blogs, and more to keep our audience informed and entertained.</p>
+                <a href="#application-form" class="apply-btn" data-position="Content Writer">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h3>Graphic Designer</h3>
+                <p>If you have an eye for design and want to help bring our stories to life visually, we’re looking for a talented graphic designer to create stunning layouts, illustrations, and graphics for our publications.</p>
+                <a href="#application-form" class="apply-btn" data-position="Graphic Designer">Apply Now</a>
+            </div>
         </div>
-        <div class="job-card">
-            <h3>Product Manager</h3>
-            <p>Do you have a knack for managing products and leading teams? We’re looking for a skilled product manager to lead our exciting new projects.</p>
-            <button>Apply Now</button>
+    </section>
+    
+    <section class="container" id="application-form">
+        <h2 class="section-title">Application Form</h2>
+        <div class="row">
+            <!-- Left side: Application Form -->
+            <div class="col-lg-9">
+                <form id="appForm" enctype="multipart/form-data" method="post">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Submit Your Application</h3>
+                        </div>
+    
+                        <!-- Full Name -->
+                        <div class="col-lg-4">
+                            <fieldset>
+                                <input name="fullName" type="text" id="fullName" placeholder="YOUR FULL NAME...*" required>
+                            </fieldset>
+                        </div>
+    
+                        <!-- Email Address -->
+                        <div class="col-lg-4">
+                            <fieldset>
+                                <input name="email" type="email" id="email" placeholder="YOUR EMAIL...*" required>
+                            </fieldset>
+                        </div>
+    
+                        <!-- Phone Number -->
+                        <div class="col-lg-4">
+                            <fieldset>
+                                <input name="phone" type="tel" id="phone" placeholder="YOUR PHONE NUMBER...*" required>
+                            </fieldset>
+                        </div>
+    
+                        <!-- Position -->
+                        <div class="col-lg-4">
+                            <fieldset>
+                                <select id="position" name="position" required>
+                                    <option value="">SELECT A POSITION...*</option>
+                                    <option value="Editor">Editor</option>
+                                    <option value="Content Writer">Content Writer</option>
+                                    <option value="Graphic Designer">Graphic Designer</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </fieldset>
+                        </div>
+    
+                        <!-- Other Position (if "Other" is selected) -->
+                        <div class="col-lg-4" id="otherPositionInput" style="display: none;">
+                            <fieldset>
+                                <input type="text" id="otherPosition" name="otherPosition" placeholder="PLEASE SPECIFY THE POSITION">
+                            </fieldset>
+                        </div>
+    
+                        <!-- Cover Letter -->
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <textarea name="coverLetter" id="coverLetter" placeholder="YOUR COVER LETTER...*" required></textarea>
+                            </fieldset>
+                        </div>
+    
+                        <!-- Resume Upload -->
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <input type="file" id="resume" name="resume" accept=".pdf" required>
+                            </fieldset>
+                        </div>
+    
+                        <!-- Submit Button -->
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <button type="submit" id="app-submit" class="button">SUBMIT APPLICATION</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="job-card">
-            <h3>Marketing Specialist</h3>
-            <p>Help us create amazing marketing strategies and campaigns! Join our marketing team and make an impact on our brand.</p>
-            <button>Apply Now</button>
+    </section>
+    
+    
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <a href="index.htm">
+                <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Logo" class="footer-logo-img">
+            </a>
         </div>
-    </div>
-</section>
 
-<section class="container">
-    <h2 class="section-title">Application Form</h2>
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="books.htm">Book Collection</a></li>
+                <li><a href="authors.htm">Authors</a></li>
+                <li><a href="404.htm">Blog</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
 
-    <div class="application-form">
-        <form action="/submit-application" method="POST" enctype="multipart/form-data">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" required placeholder="Your Full Name">
+        <!-- Join Us Section -->
+        <div class="footer-join-us">
+            <h4>Join Us</h4>
+            <ul>
+                <li><a href="apply.htm">Careers/Job Opportunities</a></li>
+                <li><a href="join-team.htm">Join Our Team (Volunteer/Internship)</a></li>
+                <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
+                <li><a href="supoort.htm">Support Us</a></li>
+            </ul>
+        </div>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="Your Email Address">
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        </div>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
+        <!-- Copyright & Contact Information -->
+        <div class="footer-bottom">
+        <p>&copy; 2025 A-D Kay Publications. All Rights Reserved.</p>
+        <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
+        </div>
+    </footer>
 
-            <label for="position">Position Applying For</label>
-            <input type="text" id="position" name="position" required placeholder="Position Name">
+    <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-            <label for="coverLetter">Cover Letter</label>
-            <textarea id="coverLetter" name="coverLetter" rows="6" placeholder="Write your cover letter here..." required></textarea>
+  <!--EmailJS -->
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
 
-            <label for="resume">Upload Your Resume (PDF only)</label>
-            <input type="file" id="resume" name="resume" accept=".pdf" required>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "yImewV5eFHccTOiKe",
+        });
+    })();
+  </script>
 
-            <button type="submit">Submit Application</button>
-        </form>
-    </div>
-</section>
+    <script src="assets/js/custom.js"></script>
 
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-container">
-      <!-- Logo Section -->
-      <div class="footer-logo">
-          <a href="index.htm">
-              <img src="assets/images/A-D KAY-nb1.png" alt="A-D Kay Logo" class="footer-logo-img">
-          </a>
-      </div>
+    <script>
+        // Automatically fill the position dropdown based on the clicked job card
+    const applyButtons = document.querySelectorAll('.apply-btn');
 
-      <!-- Quick Links -->
-      <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-              <li><a href="index.htm">Home</a></li>
-              <li><a href="books.htm">Book Collection</a></li>
-              <li><a href="authors.htm">Authors</a></li>
-              <li><a href="404.htm">Blog</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact Us</a></li>
-          </ul>
-      </div>
+    applyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const position = this.getAttribute('data-position');
+            const positionSelect = document.getElementById('position');
+            // Set the selected position in the dropdown
+            positionSelect.value = position;
+            toggleOtherPositionInput(position);
+        });
+    });
 
-      <!-- Join Us Section -->
-      <div class="footer-join-us">
-          <h4>Join Us</h4>
-          <ul>
-              <li><a href="apply.htm">Apply Now</a></li>
-              <li><a href="join-team.htm">Join Our Team</a></li>
-              <li><a href="submit-manuscript.htm">Submit Manuscript for Review</a></li>
-          </ul>
-      </div>
+    // Toggle the "Other" position input field based on the selected option
+    const positionSelect = document.getElementById('position');
+    positionSelect.addEventListener('change', function() {
+        toggleOtherPositionInput(this.value);
+    });
 
-      <!-- Social Media Links -->
-      <div class="footer-social">
-          <h4>Follow Us</h4>
-          <ul class="social-links">
-              <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">
-                  <i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">
-                  <i class="fab fa-twitter"></i></a></li>
-              <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">
-                  <i class="fab fa-instagram"></i></a></li>
-              <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
-                  <i class="fab fa-linkedin-in"></i></a></li>
-          </ul>
-      </div>
-    </div>
-
-    <!-- Copyright & Contact Information -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 A-D Kay Publications. All Rights Reserved.</p>
-      <p>Contact us at <a href="mailto:info@adkaypublications.com">info@adkaypublications.com</a></p>
-    </div>
-  </footer>
-
-</body>
+    // Function to show or hide the "Other" input field
+    function toggleOtherPositionInput(selectedValue) {
+        const otherPositionInput = document.getElementById('otherPositionInput');
+        if (selectedValue === 'Other') {
+            otherPositionInput.style.display = 'block';
+        } else {
+            otherPositionInput.style.display = 'none';
+        }
+    }
+    </script>
+    </body>
 </html>
