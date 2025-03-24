@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Layout</title>
+  <style>
+    .service-section {
+      position: relative;
+      background: url(../images/background/bookshelve.jpg) center center fixed no-repeat;
+      background-size: cover;
+      padding: 50px 20px; /* Adjusted padding */
+      z-index: 0;
+      display: flex; /* Flexbox for left-right split */
+      justify-content: center; /* Center content horizontally */
+      align-items: stretch; /* Stretch items vertically */
+      min-height: 100vh; /* Full viewport height for better display */
+    }
+
+    .service-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.7) 100%);
+      z-index: 1;
+    }
+
+    /* Wrapper for left and right sides */
+    .content-wrapper {
+      display: flex;
+      max-width: 1500px; /* Matches former max-width */
+      width: 100%;
+      gap: 40px; /* Space between left and right */
+      position: relative;
+      z-index: 2; /* Above overlay */
+    }
+
+    /* Left Side */
+    .left-side {
+      flex: 1; /* Takes up equal space */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff; /* White text for readability */
+    }
+
+    .left-side img {
+      max-width: 100%;
+      width: 300px; /* Adjust as needed */
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .left-side .section-heading {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fff; /* Matches former heading color */
+      font-family: 'Roboto', sans-serif; /* Matches former font */
+      margin-bottom: 10px;
+    }
+
+    .left-side .section-description {
+      font-size: 18px;
+      color: #fff; /* Matches former description color */
+      max-width: 80%;
+    }
+
+    /* Right Side */
+    .right-side {
+      flex: 1; /* Takes up equal space */
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px; /* Matches former gap */
+      padding: 20px;
+      width: 100%;
+    }
+
+    .item {
+      width: 60px; /* Narrow width to show only h3 initially */
+      height: 300px; /* Fixed height for consistency */
+      background-color: rgba(255, 255, 255, 0.3); /* Former default background */
+      border-radius: 10px; /* Former default border-radius */
+      box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1); /* Former shadow */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; /* Hide overflowing content */
+      cursor: pointer;
+      transition: all 0.5s ease; /* Matches former transition */
+    }
+
+    /* Initially hide img and p */
+    .item img,
+    .item p {
+      opacity: 0;
+      height: 0; /* Collapse height to hide */
+      transition: all 0.5s ease;
+    }
+
+    /* Style for h3 */
+    .item h3 {
+      color: #64def3; /* Former default h3 color */
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: center;
+      padding: 0.5em;
+      margin: 0;
+      transform: rotate(-90deg); /* Rotated like previous example */
+      transition: all 0.5s ease;
+      min-width: 14em; /* Ensure text fits when rotated */
+    }
+
+    /* Hover effect */
+    .item:hover {
+      width: 250px; /* Expand width to show full content */
+      background-color: #64def3; /* Former hover background */
+      color: #fff; /* Former hover text color */
+      transform: translateY(-10px); /* Former hover lift effect */
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Former hover shadow */
+      border-radius: 20px; /* Former hover border-radius */
+    }
+
+    .item:hover img,
+    .item:hover p {
+      opacity: 1; /* Reveal image and paragraph */
+      height: auto; /* Restore natural height */
+    }
+
+    .item:hover h3 {
+      transform: rotate(0); /* Straighten text on hover */
+      color: #000; /* Former hover h3 color */
+    }
+
+    /* Additional styling for img and p */
+    .item img {
+      max-width: 50px; /* Matches former max-width */
+      margin-top: 10px;
+      transition: transform 0.5s ease; /* Matches former transition */
+    }
+
+    .item:hover img {
+      transform: scale(1.2); /* Matches former hover scale */
+    }
+
+    .item p {
+      color: #fff; /* Former default p color */
+      padding: 0.5em;
+      text-align: center;
+      margin: 0;
+      font-size: 14px; /* Matches former font-size */
+      transition: color 0.5s ease; /* Matches former transition */
+    }
+
+    .item:hover p {
+      color: #666; /* Former hover p color */
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1000px) {
+      .content-wrapper {
+        flex-direction: column; /* Stack left and right vertically */
+        align-items: center;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="service-section">
+    <div class="content-wrapper">
+      <!-- Left Side -->
+      <div class="left-side">
+        <img src="assets/images/typewriter.jpg" alt="Services Image">
+        <h2 class="section-heading">Services</h2>
+        <p class="section-description">Discover our comprehensive range of publishing solutions tailored to bring your book to life.</p>
+      </div>
+      <!-- Right Side -->
+      <div class="right-side">
+        <div class="container">
+          <div class="item">
+            <img src="assets/images/services/edit.png" alt="Editing">
+            <h3>Editing & Proofreading</h3>
+            <p>Professional editing to refine your manuscript, ensuring clarity, consistency, and error-free text.</p>
+          </div>
+          <div class="item">
+            <img src="assets/images/services/book design.png" alt="Book Design">
+            <h3>Book Design & Layout</h3>
+            <p>Custom cover and interior design that reflects your book’s theme and engages readers.</p>
+          </div>
+          <div class="item">
+            <img src="assets/images/services/distribution.png" alt="Distribution">
+            <h3>Printing & Distribution</h3>
+            <p>High-quality printing and worldwide distribution to make your book accessible in bookstores and online.</p>
+          </div>
+          <div class="item">
+            <img src="assets/images/services/marketing.png" alt="Marketing">
+            <h3>Marketing & Promotion</h3>
+            <p>Targeted marketing strategies to increase visibility, from social media campaigns to book launch events.</p>
+          </div>
+          <div class="item">
+            <img src="assets/images/services/licensing.png" alt="Licensing">
+            <h3>Copyright & Licensing</h3>
+            <p>Expert guidance on securing copyrights and managing licensing for global rights and adaptations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -212,19 +212,21 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <!--EmailJS -->
-  <script type="text/javascript"
-          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <script type="text/javascript">
-    (function(){
-        emailjs.init({
-          publicKey: "yImewV5eFHccTOiKe",
-        });
-    })();
-  </script>
+    <!-- EmailJS (v4 only) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 
+    <!-- EmailJS Initialization -->
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "yImewV5eFHccTOiKe",
+            });
+        })();
+    </script>
+
+    <!-- Custom JS -->
     <script src="assets/js/custom.js"></script>
 
     <script>
