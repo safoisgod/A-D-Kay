@@ -39,11 +39,13 @@
                   <li><a href="#about">ABOUT US</a></li>
                   <li><a href="#contact">CONTACT US</a></li>
                 </ul>
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <label class="hamburger-icon">
+                  <input type="checkbox" id="hamburger-checkbox">
+                  <svg viewBox="0 0 32 32">
+                      <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                      <path class="line" d="M7 16 27 16"></path>
+                  </svg>
+              </label>
             </div>
         </nav>
     </header>
@@ -73,12 +75,18 @@
         <!-- Left Side -->
         <div class="left-side">
           <img src="assets/images/typewriter.jpg" alt="Services Image">
-          <h2 class="section-heading">Services</h2>
-          <p class="section-description">Discover our comprehensive range of publishing solutions tailored to bring your book to life.</p>
+          <div class="section-description">We offer a large range of services ranging from publishing to direct sales and marketing</div>
+        <div class="section-heading">What we Offer</div>
         </div>
         <!-- Right Side -->
         <div class="right-side">
           <div class="container">
+            <div class="service-section-right-item">
+              <div class="service-section-right-blob"></div>
+              <img src="assets/images/services/publishing.png" alt="Editing">
+              <h3>Book Publishing</h3>
+              <p>Professional editing to refine your manuscript, ensuring clarity, consistency, and error-free text.</p>
+            </div>
             <div class="service-section-right-item">
               <div class="service-section-right-blob"></div>
               <img src="assets/images/services/edit.png" alt="Editing">
@@ -124,10 +132,8 @@
     <section class="book-section">
       <!-- Left-aligned Heading, aligned with the book items -->
       <div class="section-container">
-        <div class="section-heading">OUR BOOK COLLECTION</div> 
-        <div class="section-description">
-          Discover our exclusive collection of books, each handpicked to inspire and enlighten. Browse through and find your next favorite read!
-        </div>
+        <div class="section-description">Check out our best selling books</div>
+        <div class="section-heading">Book Collection</div>
         <div class="book-list" id="book-carousel">
           <div class="book-item">
             <img src="assets/images/books/Culture Brewed in an African Pot.png" alt="Book 1">
@@ -238,7 +244,8 @@
     <!-- Blog Section -->
     <section class="blog-section">
       <div class="container">
-          <h2>Latest Blog Posts</h2>
+        <div class="section-description">Check out our best selling books</div>
+        <div class="section-heading">Latest Blog Posts</div>
           <div class="blog-posts" id="blog-carousel">
               <article class="blog-post">
                   <img src="assets/images/blog/Killed by Illiteracy mockup 1.png" alt="Blog Image">
@@ -280,7 +287,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h2>Discover Key Facts About A-D Kay Publications</h2>
+            <div class="section-heading">Discover Key Facts About A-D Kay Publications</div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="count-area-content">
@@ -448,6 +455,9 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- Slick Carousel JS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
  
@@ -532,8 +542,6 @@
           ]
         });
       });
-
-      
 
   </script>
 

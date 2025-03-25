@@ -1,223 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services Layout</title>
-  <style>
-    .service-section {
-      position: relative;
-      background: url(../images/background/bookshelve.jpg) center center fixed no-repeat;
-      background-size: cover;
-      padding: 50px 20px; /* Adjusted padding */
-      z-index: 0;
-      display: flex; /* Flexbox for left-right split */
-      justify-content: center; /* Center content horizontally */
-      align-items: stretch; /* Stretch items vertically */
-      min-height: 100vh; /* Full viewport height for better display */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Section</title>
+    <style>
+        /* ================================
+           BLOG SECTION STYLES
+           ================================ */
+        .blog-section {
+            position: relative;
+            background: url(../images/background/bookshelve.jpg) center center fixed no-repeat;
+            background-size: cover;
+            padding: 60px 50px;
+            text-align: center;
+        }
 
-    .service-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.7) 100%);
-      z-index: 1;
-    }
+        .blog-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
 
-    /* Wrapper for left and right sides */
-    .content-wrapper {
-      display: flex;
-      max-width: 1500px; /* Matches former max-width */
-      width: 100%;
-      gap: 40px; /* Space between left and right */
-      position: relative;
-      z-index: 2; /* Above overlay */
-    }
+        .blog-section .container {
+            width: 75%;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
 
-    /* Left Side */
-    .left-side {
-      flex: 1; /* Takes up equal space */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff; /* White text for readability */
-    }
+        .blog-section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
 
-    .left-side img {
-      max-width: 100%;
-      width: 300px; /* Adjust as needed */
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+        .blog-posts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            margin-top: 50px;
+            z-index: 2;
+            gap: 20px; /* Space between posts */
+        }
 
-    .left-side .section-heading {
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 1.4;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #fff; /* Matches former heading color */
-      font-family: 'Roboto', sans-serif; /* Matches former font */
-      margin-bottom: 10px;
-    }
+        .blog-post {
+            width: 280px; /* Mrket /* Adjusted to a fixed width like the card */
+            height: 360px; /* Increased height to fit blog content */
+            padding: 0.8em;
+            background: rgba(255, 255, 255, 0.3); /* Maintain your semi-transparent background */
+            position: relative;
+            overflow: visible;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease; /* Keep your hover effect */
+        }
 
-    .left-side .section-description {
-      font-size: 18px;
-      color: #fff; /* Matches former description color */
-      max-width: 80%;
-    }
+        .blog-post-img {
+            height: 40%; /* Match card-img height */
+            width: 100%;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease; /* Image hover effect */
+            object-fit: cover; /* Keep your image scaling */
+        }
 
-    /* Right Side */
-    .right-side {
-      flex: 1; /* Takes up equal space */
-      display: flex;
-      align-items: center;
-    }
+        .blog-post-info {
+            padding-top: 10%; /* Match card-info padding */
+            flex-grow: 1; /* Allow content to fill space */
+        }
 
-    .container {
-      display: flex;
-      gap: 20px; /* Matches former gap */
-      padding: 20px;
-      width: 100%;
-    }
+        .blog-post-footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid #ddd; /* Match card-footer border */
+        }
 
-    .item {
-      width: 60px; /* Narrow width to show only h3 initially */
-      height: 300px; /* Fixed height for consistency */
-      background-color: rgba(255, 255, 255, 0.3); /* Former default background */
-      border-radius: 10px; /* Former default border-radius */
-      box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1); /* Former shadow */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden; /* Hide overflowing content */
-      cursor: pointer;
-      transition: all 0.5s ease; /* Matches former transition */
-    }
+        /* Text */
+        .blog-post-title {
+            font-weight: 900;
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #000; /* Keep your original title color */
+        }
 
-    /* Initially hide img and p */
-    .item img,
-    .item p {
-      opacity: 0;
-      height: 0; /* Collapse height to hide */
-      transition: all 0.5s ease;
-    }
+        .blog-post-body {
+            font-size: 0.9em;
+            padding-bottom: 10px;
+            color: #fafafa; /* Keep your original body text color */
+        }
 
-    /* Style for h3 */
-    .item h3 {
-      color: #64def3; /* Former default h3 color */
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-align: center;
-      padding: 0.5em;
-      margin: 0;
-      transform: rotate(-90deg); /* Rotated like previous example */
-      transition: all 0.5s ease;
-      min-width: 14em; /* Ensure text fits when rotated */
-    }
+        /* Button (Read More link styled as button) */
+        .blog-post-button {
+            border: 1px solid #252525; /* Match card-button border */
+            display: flex;
+            padding: 0.3em 1em; /* Adjusted padding for text */
+            cursor: pointer;
+            border-radius: 50px;
+            transition: 0.3s ease-in-out;
+            color: #64def3; /* Keep your original link color */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
 
-    /* Hover effect */
-    .item:hover {
-      width: 250px; /* Expand width to show full content */
-      background-color: #64def3; /* Former hover background */
-      color: #fff; /* Former hover text color */
-      transform: translateY(-10px); /* Former hover lift effect */
-      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Former hover shadow */
-      border-radius: 20px; /* Former hover border-radius */
-    }
+        /* Hover Effects */
+        .blog-post:hover {
+            transform: translateY(-10px); /* Keep your original hover effect */
+        }
 
-    .item:hover img,
-    .item:hover p {
-      opacity: 1; /* Reveal image and paragraph */
-      height: auto; /* Restore natural height */
-    }
+        .blog-post-img:hover {
+            transform: translateY(-25%); /* Match card-img hover */
+            box-shadow: rgba(100, 222, 243, 0.25) 0px 13px 47px -5px, rgba(0, 188, 212, 0.3) 0px 8px 16px -8px; /* Adjusted shadow colors to your theme */
+        }
 
-    .item:hover h3 {
-      transform: rotate(0); /* Straighten text on hover */
-      color: #000; /* Former hover h3 color */
-    }
+        .blog-post-button:hover {
+            border: 1px solid #64def3; /* Match your theme color */
+            background-color: #64def3; /* Match your theme color */
+            color: #fff; /* White text on hover for contrast */
+        }
 
-    /* Additional styling for img and p */
-    .item img {
-      max-width: 50px; /* Matches former max-width */
-      margin-top: 10px;
-      transition: transform 0.5s ease; /* Matches former transition */
-    }
+        /* ================================
+           RESPONSIVE DESIGN ADJUSTMENTS
+           ================================ */
+        @media (max-width: 850px) {
+            .blog-section {
+                padding: 40px 20px;
+            }
 
-    .item:hover img {
-      transform: scale(1.2); /* Matches former hover scale */
-    }
+            .blog-section .container {
+                width: 90%;
+                padding: 15px;
+            }
 
-    .item p {
-      color: #fff; /* Former default p color */
-      padding: 0.5em;
-      text-align: center;
-      margin: 0;
-      font-size: 14px; /* Matches former font-size */
-      transition: color 0.5s ease; /* Matches former transition */
-    }
+            .blog-posts {
+                flex-direction: column;
+                align-items: center; /* Center posts vertically */
+            }
 
-    .item:hover p {
-      color: #666; /* Former hover p color */
-    }
+            .blog-post {
+                width: 100%;
+                max-width: 280px; /* Keep card-like width */
+                margin: 10px 0;
+            }
 
-    /* Media Queries for Responsiveness */
-    @media (max-width: 1000px) {
-      .content-wrapper {
-        flex-direction: column; /* Stack left and right vertically */
-        align-items: center;
-      }
-    }
-    
-  </style>
+            .blog-post-img {
+                height: 200px;
+            }
+
+            .blog-section h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-section {
+                padding: 30px 15px;
+            }
+
+            .blog-section .container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .blog-post-img {
+                height: 150px;
+            }
+
+            .blog-section h2 {
+                font-size: 24px;
+            }
+
+            .blog-post-title {
+                font-size: 1em; /* Adjusted for smaller screens */
+            }
+
+            .blog-post-body {
+                font-size: 0.8em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="service-section">
-    <div class="content-wrapper">
-      <!-- Left Side -->
-      <div class="left-side">
-        <img src="assets/images/typewriter.jpg" alt="Services Image">
-        <h2 class="section-heading">Services</h2>
-        <p class="section-description">Discover our comprehensive range of publishing solutions tailored to bring your book to life.</p>
-      </div>
-      <!-- Right Side -->
-      <div class="right-side">
+    <!-- Blog Section -->
+    <section class="blog-section">
         <div class="container">
-          <div class="item">
-            <img src="assets/images/services/edit.png" alt="Editing">
-            <h3>Editing & Proofreading</h3>
-            <p>Professional editing to refine your manuscript, ensuring clarity, consistency, and error-free text.</p>
-          </div>
-          <div class="item">
-            <img src="assets/images/services/book design.png" alt="Book Design">
-            <h3>Book Design & Layout</h3>
-            <p>Custom cover and interior design that reflects your book’s theme and engages readers.</p>
-          </div>
-          <div class="item">
-            <img src="assets/images/services/distribution.png" alt="Distribution">
-            <h3>Printing & Distribution</h3>
-            <p>High-quality printing and worldwide distribution to make your book accessible in bookstores and online.</p>
-          </div>
-          <div class="item">
-            <img src="assets/images/services/marketing.png" alt="Marketing">
-            <h3>Marketing & Promotion</h3>
-            <p>Targeted marketing strategies to increase visibility, from social media campaigns to book launch events.</p>
-          </div>
-          <div class="item">
-            <img src="assets/images/services/licensing.png" alt="Licensing">
-            <h3>Copyright & Licensing</h3>
-            <p>Expert guidance on securing copyrights and managing licensing for global rights and adaptations.</p>
-          </div>
+            <h2>Latest Blog Posts</h2>
+            <div class="blog-posts" id="blog-carousel">
+                <article class="blog-post">
+                    <img class="blog-post-img" src="assets/images/blog/Killed by Illiteracy mockup 1.png" alt="Blog Image">
+                    <div class="blog-post-info">
+                        <p class="blog-post-title">Exciting New Release - Killed by Illiteracy</p>
+                        <p class="blog-post-body">Announcements for new book releases, giving readers insights into the plot, characters, and themes.</p>
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="blog-post1.htm" class="blog-post-button">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img class="blog-post-img" src="assets/images/blog/book-club.jpg" alt="Blog Image">
+                    <div class="blog-post-info">
+                        <p class="blog-post-title">Join Our Monthly Book Club</p>
+                        <p class="blog-post-body">Information about book clubs, featuring discussions, Q&As, and recommendations.</p>
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="#" class="blog-post-button">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img class="blog-post-img" src="assets/images/authors/Ampem-Daako Kay -nb.png" alt="Blog Image">
+                    <div class="blog-post-info">
+                        <p class="blog-post-title">Spotlight on Ampem-Daako Kay</p>
+                        <p class="blog-post-body">Exploring the author’s journey, books, influences, and personal stories.</p>
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="#" class="blog-post-button">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img class="blog-post-img" src="assets/images/blog/submit-book.jpg" alt="Blog Image">
+                    <div class="blog-post-info">
+                        <p class="blog-post-title">Submit Your Manuscript</p>
+                        <p class="blog-post-body">A guide for new authors on getting published and tips for success.</p>
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="#" class="blog-post-button">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img class="blog-post-img" src="assets/images/blog/memorial.jpg" alt="Blog Image">
+                    <div class="blog-post-info">
+                        <p class="blog-post-title">Memorial Service Event</p>
+                        <p class="blog-post-body">Honor the legacy of Kojo Ampem-Darko at our upcoming memorial service.</p>
+                    </div>
+                    <div class="blog-post-footer">
+                        <a href="#" class="blog-post-button">Read More</a>
+                    </div>
+                </article>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 </body>
 </html>
