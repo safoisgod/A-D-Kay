@@ -1,22 +1,21 @@
-(function ($) {
 
+
+(function ($) {
     "use strict";
 
     // Wait until the document is fully loaded
     $(document).ready(function () {
+        console.log('Document ready');
 
         // Scroll event to change header background color
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
             var header = $('header');
-            var scrollStop = $('#scroll-stop').offset().top; // Get the position of the #scroll-stop section
-        
-            // Check if we have passed the scroll-stop section
+            var scrollStop = $('#scroll-stop').offset() ? $('#scroll-stop').offset().top : 0;
+
             if (scroll >= scrollStop) {
-                // If we passed scroll-stop, make the header fixed and solid white
                 header.addClass("fixed").addClass("scrolled");
             } else {
-                // If we're above scroll-stop, remove the fixed class and keep it transparent
                 header.removeClass("fixed").removeClass("scrolled");
             }
         });
@@ -39,7 +38,7 @@
             });
         });
 
-        // Counter effect (no change)
+        // Counter effect
         function visible(partial) {
             var $t = partial,
                 $w = $(window),
@@ -73,37 +72,85 @@
             }
         });
 
-        // Toggle menu for the hamburger icon
+        // Programmatic binding for toggleMenu
         function toggleMenu() {
-            const menu = $('.menu-space');
-            const hamburgerIcon = $('.hamburger-icon');
-            
-            // Toggle the active class for both the menu and the hamburger icon
-            menu.toggleClass('active');
-            hamburgerIcon.toggleClass('active');
+            console.log('toggleMenu called');
+            const checkbox = document.querySelector('.hamburger-icon input');
+            const menu = document.querySelector('.menu-space');
+            if (checkbox && menu) {
+                menu.classList.toggle('active', checkbox.checked);
+            } else {
+                console.error('Checkbox or menu not found');
+            }
         }
 
-        // Add event listener to hamburger icon to toggle the menu
-        $('.hamburger-icon').on('click', toggleMenu);
+        // Bind the event
+        $('#hamburger-checkbox').on('change', function() {
+            console.log('Checkbox changed');
+            toggleMenu();
+        });
 
-        // Get the stock status text and the button element
-        var stockStatus = $('#stockStatus').text().trim();  // .trim() ensures no extra spaces are considered
-        var buyNowButton = $('#buyNowButton');  // Button selector
+        // Stock status logic
+        var stockStatus = $('#stockStatus').text().trim();
+        var buyNowButton = $('#buyNowButton');
 
-        console.log("Stock Status: ", stockStatus);  // Debugging: check what the stock status is
-        console.log("Buy Now Button: ", buyNowButton);  // Debugging: ensure button is correctly selected
+        console.log("Stock Status: ", stockStatus);
+        console.log("Buy Now Button: ", buyNowButton);
 
-        // Check if the stock status is "Out of Stock"
         if (stockStatus === "Out of Stock") {
-            buyNowButton.addClass("disabled");  // Add the disabled class to the "Buy Now" button
-            $('#stockStatus').css('color', 'red');  // Make the stock status text red
+            buyNowButton.addClass("disabled");
+            $('#stockStatus').css('color', 'red');
         }
 
         if (stockStatus === "In Stock") {
-            $('#stockStatus').css('color', 'green');  // Make the stock status text red
-        } 
-        
-     
+            $('#stockStatus').css('color', 'green');
+        }
+
+        // Contact form
+        $('#form-submit').on('click', function(event) {
+            sendMail(event);
+        });
+
+        function sendMail(event) {
+            event.preventDefault();
+
+            const currentDate = new Date();
+            const formattedTime = currentDate.toLocaleString();
+
+            console.log("Form submission prevented.");
+            console.log("Message sent at:", formattedTime);
+
+            let parms = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+                sentAt: formattedTime
+            };
+
+            console.log("Form data:", parms);
+
+            emailjs.send("service_v88yqdj", "template_10o3viu", parms)
+                .then(function(response) {
+                    console.log("Email sent successfully", response);
+                    alert("Email Sent!!");
+                }, function(error) {
+                    console.error("Email sending failed:", error);
+                    alert("Failed to send email. Please try again.");
+                });
+        }
     });
+
+    // Global toggleMenu (for inline onchange fallback)
+    window.toggleMenu = function() {
+        console.log('Global toggleMenu called');
+        const checkbox = document.querySelector('.hamburger-icon input');
+        const menu = document.querySelector('.menu-space');
+        if (checkbox && menu) {
+            menu.classList.toggle('active', checkbox.checked);
+        } else {
+            console.error('Checkbox or menu not found in global scope');
+        }
+    };
 
 })(window.jQuery);
