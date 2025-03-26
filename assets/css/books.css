@@ -1,4 +1,21 @@
+.book-collection-section {
+    position: relative;
+    background: url(../images/background/bookshelve.jpg) center center fixed no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    z-index: 0;
+}
 
+.book-collection-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
 
 .book-collection-section {
     padding: 40px 20px;
@@ -22,11 +39,23 @@
 
 .bc-book-item {
     position: relative;
-    overflow: hidden;
-    border-radius: 5px;
     background-color: #fff;
+    margin: 0 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid white;
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
 }
 
 .bc-book-item img {
@@ -37,22 +66,30 @@
 }
 
 .bc-book-item:hover {
+    border: 1px solid #64def3;
     transform: scale(1.05);
 }
 
-.bc-book-item:hover img {
-    transform: scale(1.1);
-}
+.bc-book-item:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
 
 .bc-book-overlay {
     position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .bc-book-item:hover .bc-book-overlay {
@@ -69,9 +106,17 @@
 }
 
 .bc-book-title {
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 5px 0;
+}
+
+.bc-book-details .author-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #64def3;
+    font-style: italic;
+
 }
 
 .bc-book-details .bc-rating {
@@ -90,35 +135,14 @@
     text-align: center;
 }
 
-.view-me,
-.buy {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.view-me {
-    background-color: #64def3;
-}
-
-.buy {
-    background-color: #37cbf5;
-}
-
-.view-me:hover,
-.buy:hover {
-    background-color: #00bcd4;
-    transform: scale(1.05);
-}
 
 .book-detail-section {
     padding: 60px 20px;
     background-color: #f4f4f4;
+}
+
+.ab-author-bio img{
+    width: 50px;
 }
 
 .book-detail-img {
@@ -188,32 +212,6 @@ h5 {
     color: #555;
 }
 
-.ab-author-bio {
-    display: flex;
-    align-items: center;
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.ab-author-bio h4 {
-    font-size: 1.3rem;
-    margin: 0 0 20px;
-}
-
-.ab-author-info {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.ab-author-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: contain;
-    margin-right: 20px;
-    flex-shrink: 0;
-}
 
 .buttons {
     margin-top: 20px;
@@ -265,15 +263,6 @@ h5 {
 
     .bc-book-list {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ab-author-bio {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .ab-author-image {
-        margin: 0 0 20px;
     }
 }
 
