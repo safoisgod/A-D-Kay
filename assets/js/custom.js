@@ -153,4 +153,66 @@
         }
     };
 
+    //LOADING ANIMATION
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const overlay = document.getElementById('loading-overlay');
+        const content = document.querySelector('.content');
+        const mainBanner = document.querySelector('.main-banner');
+        const curtain = document.querySelector('.banner-curtain');
+        
+        // Show loader immediately on page load
+        overlay.style.visibility = 'visible';
+
+        // Split text into characters and wrap in spans
+        function splitTextToChars(element) {
+            const text = element.textContent;
+            element.innerHTML = '';
+            text.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                element.appendChild(span);
+            });
+        }
+
+        // Apply to h6, h2, and p
+        splitTextToChars(document.querySelector('.video-overlay h6'));
+        splitTextToChars(document.querySelector('.video-overlay h2'));
+        splitTextToChars(document.querySelector('.video-overlay p'));
+
+        // Hide loader and trigger animations after random delay
+        const randomDelay = Math.floor(Math.random() * 3000) + 1000;
+        setTimeout(() => {
+            overlay.style.visibility = 'hidden';
+            
+            // Open curtain within banner
+            mainBanner.classList.add('open');
+            
+            // After curtain opens, start content animation and hide curtain
+            setTimeout(() => {
+                content.style.opacity = '1';
+                const chars = document.querySelectorAll('.char');
+                chars.forEach((char, index) => {
+                    char.style.animationDelay = `${index * 20}ms`;
+                });
+                document.body.style.overflow = 'auto';
+                curtain.style.display = 'none'; // Remove curtain after animation
+            }, 500); // Matches curtain animation duration (0.5s)
+        }, randomDelay);
+
+        // Show loader and reset curtain when clicking internal links
+        document.querySelectorAll('a').forEach(link => {
+            if (link.hostname === window.location.hostname) {
+                link.addEventListener('click', (e) => {
+                    if (!link.download && !link.target) {
+                        overlay.style.visibility = 'visible';
+                        mainBanner.classList.remove('open');
+                        curtain.style.display = 'block'; // Show curtain for next load
+                    }
+                });
+            }
+        });
+    });
+
 })(window.jQuery);
